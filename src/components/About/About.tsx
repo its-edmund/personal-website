@@ -1,14 +1,6 @@
-import {
-  faApple,
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faApple, faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-
-import Center from "../../common/Center/index";
 
 import "./About.scss";
 
