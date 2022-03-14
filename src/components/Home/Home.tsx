@@ -1,10 +1,7 @@
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router";
-import useScrollSnap from "react-use-scroll-snap";
-import createScrollSnap from "scroll-snap";
+import React, { useRef, useState } from "react";
 
 import About from "../About/About";
 import Work from "../Work/Work";
