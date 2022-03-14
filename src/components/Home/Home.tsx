@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 
 import About from "../About/About";
+import Interests from "../Interests/Interests";
 import Work from "../Work/Work";
 
 import "./Home.scss";
@@ -85,6 +86,8 @@ const Home = () => {
       <About />
       <div className="scroll" ref={workRef} />
       <Work />
+      <div className="scroll" />
+      <Interests />
     </div>
   );
 };
