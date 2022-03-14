@@ -7,7 +7,7 @@ import "./About.scss";
 const About = () => (
   <div className="about">
     <div className="about-content">
-      <h3>hello, i'm edmund</h3>
+      <h3>me</h3>
       <p>school: cs @ georgia tech</p>
       <p>
         company: swe intern @ <FontAwesomeIcon icon={faApple} />
