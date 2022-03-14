@@ -5,7 +5,7 @@
 
 html {
   /* body won't work ¯\_(ツ)_/¯ */
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 body {

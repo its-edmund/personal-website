@@ -18,3 +18,28 @@
   display: flex;
   gap: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .projects {
+    height: auto !important;
+  }
+  // .project-content {
+  //   height: 1000px;
+  // }
+
+  .project-cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // overflow: scroll;
+  }
+
+  .orgs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // overflow: scroll;
+  }
+}

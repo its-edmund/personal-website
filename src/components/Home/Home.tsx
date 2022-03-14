@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 
 import About from "../About/About";
+import Cat from "../Cat/Cat";
 import Interests from "../Interests/Interests";
 import Work from "../Work/Work";
 
@@ -88,6 +89,8 @@ const Home = () => {
       <Work />
       <div className="scroll" />
       <Interests />
+      {/* <div className="scroll" /> */}
+      {/* <Cat /> */}
     </div>
   );
 };
