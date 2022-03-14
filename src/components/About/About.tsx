@@ -10,7 +10,7 @@ const About = () => (
       <h3>me</h3>
       <p>school: cs @ georgia tech</p>
       <p>
-        company: swe intern @ <FontAwesomeIcon icon={faApple} />
+        company: incoming swe intern @ <FontAwesomeIcon icon={faApple} />
       </p>
       <p>tech stack: typescript, node, express, mongodb, python, java, c++</p>
       <div className="icon-container">

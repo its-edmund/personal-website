@@ -17,7 +17,7 @@ const Home = () => {
   const [isVisible, setVisible] = useState(true);
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 200) {
       setVisible(false);
     } else {
       setVisible(true);
