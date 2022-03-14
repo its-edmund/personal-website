@@ -63,7 +63,7 @@ const Home = () => {
       <div className="scroll" />
       <motion.div animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="Home">
         <h1 className={`fade-in-section ${isVisible ? "is-visible" : ""}`}>
-          it's me,{" "}
+          hi, i'm{" "}
           <span className="glitch hover" data-text="edmund." onClick={scrollToAbout}>
             edmund.
           </span>
