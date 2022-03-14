@@ -1,14 +1,52 @@
 .card {
-  height: 300px;
+  display: flex;
+  flex-direction: column;
   width: 200px;
+  height: 300px;
   box-shadow: 0 0 5px #ccc;
   border-radius: 10px;
-  padding: 10px;
   transform: translateY(0px);
   transition: transform 0.3s ease-in-out;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  justify-content: space-between;
+}
+
+.card-title {
+  margin-bottom: 10px;
 }
 
 .card:hover {
   transform: translateY(10px);
   transition: transform 0.3s ease-in-out;
+}
+
+.info-container {
+  width: 100%;
+  bottom: 20px;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  float: inline-end;
+  bottom: 70px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.github-icon {
+  float: left;
+  bottom: 20px;
+  left: 20px;
+}
+
+.browser-icon {
+  float: right;
+  bottom: 20px;
+  right: 20px;
 }

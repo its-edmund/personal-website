@@ -24,8 +24,26 @@ const Work = () => (
           </span>
         </a>
       </p>
-      <div className="project-cards">
-        <Card />
+    </div>
+    <div className="orgs">
+      <div className="org">
+        <h5>@hackgt</h5>
+        <div className="project-cards">
+          <Card
+            org="hackgt"
+            repo="api"
+            liveLink="https://users.api.hexlabs.org"
+            description="Microservice API that supports all of HackGT's frontend applications."
+          />
+          <Card org="hackgt" repo="ballot" liveLink="https://expo.hexlabs.org" />
+        </div>
+      </div>
+      <div className="org">
+        <h5>@gtbitsofgood</h5>
+        <div className="project-cards">
+          <Card org="gtbitsofgood" repo="gt-scheduler" liveLink="https://gt-scheduler.org" />
+          <Card org="gtbitsofgood" repo="bgc-safety" liveLink="https://expo.hexlabs.org" />
+        </div>
       </div>
     </div>
   </div>

@@ -3,3 +3,16 @@
   margin-right: 20vw;
   padding-top: 10vh;
 }
+
+.project-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.orgs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
