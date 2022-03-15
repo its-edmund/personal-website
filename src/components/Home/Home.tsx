@@ -65,13 +65,13 @@ const Home = () => {
       <motion.div animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="Home">
         <h1 className={`fade-in-section ${isVisible ? "is-visible" : ""}`}>
           hi, i'm{" "}
-          <span className="glitch hover" data-text="edmund." onClick={scrollToAbout}>
+          <span className="highlight" data-text="edmund." onClick={scrollToAbout}>
             edmund.
           </span>
         </h1>
         <h1 className={`fade-in-section ${isVisible ? "is-visible" : ""}`}>
           welcome to my{" "}
-          <span className="glitch hover" data-text="website." onClick={scrollToWork}>
+          <span className="highlight" data-text="website." onClick={scrollToWork}>
             website.
           </span>
         </h1>

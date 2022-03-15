@@ -13,13 +13,13 @@ const Work = () => (
         towards a cause that benefit people. my most notable work has been contributed to projects
         in{" "}
         <a href="https://bitsofgood.org/" target="_blank" rel="noreferrer">
-          <span className="glitch hover-p" data-text="bits of good">
+          <span className="highlight" data-text="bits of good">
             bits of good
           </span>
         </a>{" "}
         and{" "}
         <a href="https://hexlabs.org/" target="_blank" rel="noreferrer">
-          <span className="glitch hover-p" data-text="hexlabs.">
+          <span className="highlight" data-text="hexlabs.">
             hexlabs.
           </span>
         </a>
