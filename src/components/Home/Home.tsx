@@ -61,6 +61,16 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <h4 unselectable="on">
+        <a
+          className="highlight-hide"
+          unselectable="on"
+          id="login-link"
+          href="https://login.edmundxin.me"
+        >
+          login
+        </a>
+      </h4>
       <div className="scroll" />
       <motion.div animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="Home">
         <h1 className={`fade-in-section ${isVisible ? "is-visible" : ""}`}>

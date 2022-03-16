@@ -11,6 +11,17 @@
   }
 }
 
+#login-link {
+  color: white;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
 @media only screen and (max-width: 600px) {
   .Home {
     display: flex;
@@ -46,6 +57,36 @@
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
+}
+
+.highlight-hide {
+    color: black;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+        background-image: linear-gradient(120deg, #8E33FF 0%, #FF33AB 100%);
+        background-size: 100% 0.23;
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        right: -2%;
+        bottom: 0;
+        left: -2%;
+        background-repeat: no-repeat;
+        transition: top 0.5s cubic-bezier(0, 0.8, 0.13, 1);
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: white;
+
+        &::after {
+            top: 10%;
+            bottom: 5%;
+        }
+    }
 }
 
 
