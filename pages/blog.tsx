@@ -18,7 +18,7 @@ const Blog: NextPage = () => {
           </div>
           <div className="flex flex-col justify-center">
             <h6 className="text-lg">March 28, 2022</h6>
-            <h2 className="text-[72px] font-bold">Hubba Hubba</h2>
+            <h2 className="text-[72px] font-bold">Coming Soon</h2>
             <p>
               Wowza, this is really cool and if you're interested, you should
               click on this card.

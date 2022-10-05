@@ -37,6 +37,27 @@ const Resume: NextPage = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-col">
+          <div className="flex flex-row py-12 text-xl">
+            <h5 className="w-1/4 text-xl font-semibold">Experience</h5>
+            <div className="flex flex-col w-full">
+              <div className="flex flex-row">
+                <div>
+                  <h6 className="font-semibold">Tesla</h6>
+                  <p>B.S. in Computer Science</p>
+                </div>
+                <div className="flex flex-col ml-auto text-right">
+                  <h6>Aug 2020 - May 2024</h6>
+                  <p>B.S. in Computer Science</p>
+                </div>
+              </div>
+
+              <p className="mt-4">
+                Threads: Systems Architecture and Information Internetworks
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

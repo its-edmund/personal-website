@@ -20,6 +20,79 @@ import {
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import Fade from "react-reveal/Fade";
+import ReactLogo from "../assets/images/react.svg";
+import TailwindLogo from "../assets/images/tailwind.svg";
+import TypescriptLogo from "../assets/images/typescript.svg";
+import PythonLogo from "../assets/images/python.svg";
+import VimLogo from "../assets/images/vim.svg";
+import NodeLogo from "../assets/images/node.svg";
+import VueLogo from "../assets/images/vue.svg";
+import AngularLogo from "../assets/images/angular.svg";
+
+interface Technology {
+  title: String;
+  description: String;
+  backgroundColor: String;
+  image?: String;
+}
+
+const Technologies: Technology[] = [
+  {
+    title: "React",
+    description: "React is how I started my software engineering career.",
+    backgroundColor: "bg-cyan-400",
+    image: ReactLogo,
+  },
+
+  {
+    title: "Tailwind CSS",
+    description:
+      "Anytime I need to style components, this is my go-to library.",
+    backgroundColor: "bg-blue-600",
+    image: TailwindLogo,
+  },
+  {
+    title: "Express",
+    description:
+      "Lightweight backend server that introduced me to backend programming.",
+    backgroundColor: "bg-black",
+  },
+  {
+    title: "NodeJS",
+    description: "JavaScript runtime",
+    backgroundColor: "bg-emerald-400",
+    image: NodeLogo,
+  },
+  {
+    title: "Python",
+    description: "My favorite scripting language and what I use for Leetcode.",
+    backgroundColor: "bg-yellow-500",
+    image: PythonLogo,
+  },
+  {
+    title: "TypeScript",
+    description: "TypeScript > JavaScript, IYKYK",
+    backgroundColor: "bg-blue-400",
+    image: TypescriptLogo,
+  },
+  {
+    title: "Vim",
+    description: "I cannot live without Vim",
+    backgroundColor: "bg-green-400",
+    image: VimLogo,
+  },
+  {
+    title: "Vue",
+    description: "Secondary JavaScript Library",
+    backgroundColor: "bg-teal-400",
+    image: VueLogo,
+  },
+  {
+    title: "TanStack",
+    description: "React Table and React Query are the best!",
+    backgroundColor: "bg-blue-900",
+  },
+];
 
 const Home: NextPage = () => {
   return (
@@ -32,7 +105,7 @@ const Home: NextPage = () => {
 
       <Layout>
         <div className="h-screen relative -mt-16">
-          <div className="absolute -top-16 -left-64 blur-3xl opacity-25 -z-10">
+          <div className="absolute -top-16 -left-64 blur-3xl opacity-25 -z-10 animate-[spin_30s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 900 600"
@@ -48,7 +121,7 @@ const Home: NextPage = () => {
               </g>
             </svg>
           </div>
-          <div className="absolute top-32 -left-96 blur-3xl opacity-25 -z-10">
+          <div className="absolute top-32 -left-96 blur-3xl opacity-25 -z-10 animate-[wiggle_12s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 1200 900"
@@ -64,7 +137,7 @@ const Home: NextPage = () => {
               </g>
             </svg>
           </div>
-          <div className="absolute -right-96 top-96 blur-3xl opacity-25">
+          <div className="absolute -right-96 top-96 blur-3xl opacity-25 animate-[spin_12s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 900 450"
@@ -80,7 +153,7 @@ const Home: NextPage = () => {
               </g>
             </svg>
           </div>
-          <div className="absolute -right-32 top-[560px] blur-3xl opacity-25 scale-150">
+          <div className="absolute -right-32 top-[560px] blur-3xl opacity-25 scale-150 animte-[wiggle_12s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 900 450"
@@ -96,7 +169,7 @@ const Home: NextPage = () => {
               </g>
             </svg>
           </div>
-          <div className="flex flex-row h-full items-center p-64">
+          <div className="flex flex-row h-full items-center w-3/4 mx-auto">
             {/* <div className="overflow-hidden z-0">
               <svg
                 id="visual"
@@ -116,12 +189,13 @@ const Home: NextPage = () => {
             </div> */}
             <Fade duration={2000}>
               <div className="w-full items-center">
-                <h1 className="text-[84px] font-extrabold tracking-tighter">
-                  Edmund Xin
-                </h1>
-                <h3 className="text-md">
-                  Software developer, student, and super excited about
-                  technology.
+                <div className="flex flex-row">
+                  <h1 className="text-[84px] font-extrabold tracking-tighter -mb-4">
+                    Edmund Xin
+                  </h1>
+                </div>
+                <h3 className="text-lg font-medium">
+                  Current SWE Intern @ Tesla | Student @ Georgia Tech
                 </h3>
               </div>
               <div className="w-full flex-col flex items-center gap-4"></div>
@@ -134,7 +208,7 @@ const Home: NextPage = () => {
           </Fade>
           <Fade duration={2000} delay={200}>
             <ExperienceCard className="bg-gradient-to-l from-rose-300 to-rose-400">
-              <div className="w-1/3 z-10 relative">
+              <div className="w-1/4 z-10 relative">
                 <h3>Aug 2022 - Present</h3>
                 <h2 className="text-5xl font-extrabold mb-4">Tesla</h2>
                 <Image
@@ -145,7 +219,7 @@ const Home: NextPage = () => {
                   className="ml-10"
                 />
               </div>
-              <div className="z-10 relative">
+              <div className="z-10 relative w-full">
                 <p className="text-lg">
                   I'm currently a full stack intern for Tesla's Supply Chain
                   Automation team. We're working on an application that helps
@@ -159,7 +233,7 @@ const Home: NextPage = () => {
           </Fade>
           <Fade duration={2000} delay={200}>
             <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 text-right">
-              <div className="z-10 relative">
+              <div className="z-10 relative w-full">
                 <p className="text-lg">
                   I'm currently a full stack intern for Tesla's Supply Chain
                   Automation team. We're working on an application that helps
@@ -169,7 +243,7 @@ const Home: NextPage = () => {
                   cheaper product for Tesla customers.
                 </p>
               </div>
-              <div className="w-1/3 z-10 relative text-right ml-12">
+              <div className="w-1/4 z-10 relative text-right ml-12">
                 <h3>May 2022 - Aug 2022</h3>
                 <h2 className="text-5xl font-extrabold mb-4">Apple</h2>
                 <Image
@@ -184,8 +258,8 @@ const Home: NextPage = () => {
           </Fade>
           <Fade duration={2000} delay={200}>
             <ExperienceCard className="bg-gradient-to-r from-orange-400 via-violet-500 to-blue-500">
-              <div className="w-1/3 z-10 relative mr-6">
-                <h3>Aug 2022 - Present</h3>
+              <div className="w-1/4 z-10 relative mr-6">
+                <h3>May 2021 - Aug 2021</h3>
                 <h2 className="text-5xl font-extrabold mb-4">Streamr</h2>
                 <div className="ml-6">
                   <Image
@@ -196,7 +270,7 @@ const Home: NextPage = () => {
                   />
                 </div>
               </div>
-              <div className="z-10 relative">
+              <div className="z-10 relative w-full">
                 <p className="text-lg">
                   I'm currently a full stack intern for Tesla's Supply Chain
                   Automation team. We're working on an application that helps
@@ -211,7 +285,7 @@ const Home: NextPage = () => {
           <Fade duration={2000} delay={200}>
             <h2 className="font-extrabold text-[48px] -mb-6 mt-6">Clubs</h2>
           </Fade>
-          <div className="flex flex-row gap-12 items-start">
+          <div className="flex flex-row gap-12 items-start mb-12">
             <Fade duration={2000} delay={200}>
               <div className="bg-gradient-to-tr from-violet-600 to-pink-500 w-full rounded-2xl p-1 min-h-fit">
                 <div className="bg-neutral-900 w-full h-full rounded-xl px-20 py-14">
@@ -425,6 +499,98 @@ const Home: NextPage = () => {
             <h2 className="font-extrabold text-[48px] -mb-6">
               Technologies I Love
             </h2>
+          </Fade>
+          <div className="flex flex-row w-full items-start gap-8">
+            <div className="flex flex-col w-full justify-start gap-8">
+              {Technologies.map((tech, i) => {
+                if (i % 3 !== 0) {
+                  return;
+                }
+
+                return (
+                  <Fade key={tech.title}>
+                    <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
+                      {tech.image && (
+                        <div className="w-3/5 mx-auto mb-10">
+                          <Image src={tech.image} layout="responsive" />
+                        </div>
+                      )}
+                      <h3 className="text-3xl font-extrabold">{tech.title}</h3>
+                      <p>{tech.description}</p>
+                    </div>
+                  </Fade>
+                );
+              })}
+            </div>
+            <div className="flex flex-col w-full justify-start gap-8">
+              {Technologies.map((tech, i) => {
+                if (i % 3 !== 1) {
+                  return;
+                }
+
+                return (
+                  <Fade key={tech.title}>
+                    <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
+                      {tech.image && (
+                        <div className="w-3/5 mx-auto mb-10">
+                          <Image src={tech.image} layout="responsive" />
+                        </div>
+                      )}
+                      <h3 className="text-3xl font-extrabold">{tech.title}</h3>
+                      <p>{tech.description}</p>
+                    </div>
+                  </Fade>
+                );
+              })}
+            </div>
+            <div className="flex flex-col w-full justify-start gap-8">
+              {Technologies.map((tech, i) => {
+                if (i % 3 !== 2) {
+                  return;
+                }
+
+                return (
+                  <Fade key={tech.title}>
+                    <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
+                      {tech.image && (
+                        <div className="w-3/5 mx-auto mb-10">
+                          <Image src={tech.image} layout="responsive" />
+                        </div>
+                      )}
+
+                      <h3 className="text-3xl font-extrabold">{tech.title}</h3>
+                      <p>{tech.description}</p>
+                    </div>
+                  </Fade>
+                );
+              })}
+            </div>
+          </div>
+          <Fade>
+            <h4 className="font-bold text-2xl text-center mb-12">
+              And more! I love learning new technologies!
+            </h4>
+          </Fade>
+          <Fade>
+            <h2 className="font-extrabold text-[48px] -mb-6">
+              Technologies I Hate
+            </h2>
+            <Fade>
+              <div className="flex flex-row gap-8">
+                <div className="w-full">
+                  <div className={`bg-red-500 p-12 rounded-lg`}>
+                    <div className="w-3/5 mx-auto mb-10">
+                      <Image src={AngularLogo} layout="responsive" />
+                    </div>
+
+                    <h3 className="text-3xl font-extrabold">Angular</h3>
+                    <p>Do I need to elaborate?</p>
+                  </div>
+                </div>
+                <div className="w-full"></div>
+                <div className="w-full"></div>
+              </div>
+            </Fade>
           </Fade>
         </div>
       </Layout>
