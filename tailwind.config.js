@@ -11,6 +11,10 @@ module.exports = {
           "0%, 100%": { transform: "rotate(-25deg)" },
           "50%": { transform: "rotate(25deg)" },
         },
+        grow: {
+          "0%, 100%": { transform: "scale(100%)" },
+          "50%": { transform: "scale(150%)" },
+        },
       },
     },
     fontFamily: {

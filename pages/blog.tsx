@@ -20,8 +20,8 @@ const Blog: NextPage = () => {
             <h6 className="text-lg">March 28, 2022</h6>
             <h2 className="text-[72px] font-bold">Coming Soon</h2>
             <p>
-              Wowza, this is really cool and if you're interested, you should
-              click on this card.
+              Wowza, this is really cool and if you&#39;re interested, you
+              should click on this card.
             </p>
           </div>
         </div>

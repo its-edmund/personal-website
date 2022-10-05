@@ -105,7 +105,7 @@ const Home: NextPage = () => {
 
       <Layout>
         <div className="h-screen relative -mt-16">
-          <div className="absolute -top-16 -left-64 blur-3xl opacity-25 -z-10 animate-[spin_30s_ease-in-out_infinite]">
+          <div className="fixed top-16 left-32 blur-3xl opacity-25 -z-10 animate-[spin_30s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 900 600"
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
               </g>
             </svg>
           </div>
-          <div className="absolute top-32 -left-96 blur-3xl opacity-25 -z-10 animate-[wiggle_12s_ease-in-out_infinite]">
+          <div className="fixed top-4 -left-32 blur-3xl opacity-25 -z-10 animate-[grow_6s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 1200 900"
@@ -137,7 +137,7 @@ const Home: NextPage = () => {
               </g>
             </svg>
           </div>
-          <div className="absolute -right-96 top-96 blur-3xl opacity-25 animate-[spin_12s_ease-in-out_infinite]">
+          <div className="fixed right-2 top-96 blur-3xl opacity-25 scale-150 animate-[spin_12s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 900 450"
@@ -148,12 +148,12 @@ const Home: NextPage = () => {
               <g transform="translate(445.491872318368 232.91239597764786)">
                 <path
                   d="M179.5 -226.2C226.7 -212.7 255.1 -152.4 266.4 -92.5C277.7 -32.5 272 27 241.8 65.8C211.6 104.6 156.9 122.7 112.6 150.1C68.2 177.5 34.1 214.3 0.5 213.5C-33.1 212.8 -66.1 174.7 -112.4 147.9C-158.7 121.1 -218.2 105.7 -245.1 68.8C-272 31.9 -266.3 -26.4 -240.7 -69.9C-215.1 -113.3 -169.5 -142 -126.1 -156.7C-82.7 -171.5 -41.3 -172.2 12.4 -189.3C66.1 -206.3 132.3 -239.7 179.5 -226.2"
-                  fill="#001ea6"
+                  fill="#b205b7"
                 ></path>
               </g>
             </svg>
           </div>
-          <div className="absolute -right-32 top-[560px] blur-3xl opacity-25 scale-150 animte-[wiggle_12s_ease-in-out_infinite]">
+          <div className="fixed right-64 top-[560px] blur-3xl opacity-25 animate-[wiggle_12s_ease-in-out_infinite]">
             <svg
               id="visual"
               viewBox="0 0 900 450"
@@ -221,12 +221,12 @@ const Home: NextPage = () => {
               </div>
               <div className="z-10 relative w-full">
                 <p className="text-lg">
-                  I'm currently a full stack intern for Tesla's Supply Chain
-                  Automation team. We're working on an application that helps
-                  Global Supply Managers analyze part prices which can help
-                  provide information for price negotiation. These tools help to
-                  reduce costs throughout the supply chain which allows for
-                  cheaper product for Tesla customers.
+                  I&#39;m currently a full stack intern for Tesla&#39;s Supply
+                  Chain Automation team. We&#39;re working on an application
+                  that helps Global Supply Managers analyze part prices which
+                  can help provide information for price negotiation. These
+                  tools help to reduce costs throughout the supply chain which
+                  allows for cheaper product for Tesla customers.
                 </p>
               </div>
             </ExperienceCard>
@@ -234,14 +234,7 @@ const Home: NextPage = () => {
           <Fade duration={2000} delay={200}>
             <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 text-right">
               <div className="z-10 relative w-full">
-                <p className="text-lg">
-                  I'm currently a full stack intern for Tesla's Supply Chain
-                  Automation team. We're working on an application that helps
-                  Global Supply Managers analyze part prices which can help
-                  provide information for price negotiation. These tools help to
-                  reduce costs throughout the supply chain which allows for
-                  cheaper product for Tesla customers.
-                </p>
+                <p className="text-lg">A</p>
               </div>
               <div className="w-1/4 z-10 relative text-right ml-12">
                 <h3>May 2022 - Aug 2022</h3>
@@ -272,12 +265,12 @@ const Home: NextPage = () => {
               </div>
               <div className="z-10 relative w-full">
                 <p className="text-lg">
-                  I'm currently a full stack intern for Tesla's Supply Chain
-                  Automation team. We're working on an application that helps
-                  Global Supply Managers analyze part prices which can help
-                  provide information for price negotiation. These tools help to
-                  reduce costs throughout the supply chain which allows for
-                  cheaper product for Tesla customers.
+                  I&#39;m currently a full stack intern for Tesla&#39;s Supply
+                  Chain Automation team. We&#39;re working on an application
+                  that helps Global Supply Managers analyze part prices which
+                  can help provide information for price negotiation. These
+                  tools help to reduce costs throughout the supply chain which
+                  allows for cheaper product for Tesla customers.
                 </p>
               </div>
             </ExperienceCard>
@@ -295,7 +288,12 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Image src={HexLabs} width={220} height={32} />
+                    <Image
+                      alt="HexLabs Logo"
+                      src={HexLabs}
+                      width={220}
+                      height={32}
+                    />
                     <FontAwesomeIcon
                       icon={faArrowUpRightFromSquare}
                       className="mt-1 -ml-3"
@@ -369,8 +367,8 @@ const Home: NextPage = () => {
                           Frontend Developer
                         </h3>
                         <p className="text-neutral-300">
-                          Worked on HexLab's project judging system to display
-                          table data.
+                          Worked on HexLab&#39;s project judging system to
+                          display table data.
                         </p>
                       </div>
                     </div>
@@ -387,7 +385,7 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Image src={Bog} height={40} width={210} />
+                    <Image alt="Bog Logo" src={Bog} height={40} width={210} />
                     <FontAwesomeIcon
                       icon={faArrowUpRightFromSquare}
                       className="mt-1"
@@ -421,7 +419,7 @@ const Home: NextPage = () => {
                           Engineering Manager
                         </h3>
                         <p className="text-neutral-300">
-                          Leading Bits of Good's internal tools team which
+                          Leading Bits of Good&#39;s internal tools team which
                           maintains GT Scheduler and maintenance requests for
                           previous projects.
                         </p>
@@ -512,7 +510,11 @@ const Home: NextPage = () => {
                     <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
                       {tech.image && (
                         <div className="w-3/5 mx-auto mb-10">
-                          <Image src={tech.image} layout="responsive" />
+                          <Image
+                            alt="Tech Logo"
+                            src={tech.image}
+                            layout="responsive"
+                          />
                         </div>
                       )}
                       <h3 className="text-3xl font-extrabold">{tech.title}</h3>
@@ -533,7 +535,11 @@ const Home: NextPage = () => {
                     <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
                       {tech.image && (
                         <div className="w-3/5 mx-auto mb-10">
-                          <Image src={tech.image} layout="responsive" />
+                          <Image
+                            alt="Tech Logo"
+                            src={tech.image}
+                            layout="responsive"
+                          />
                         </div>
                       )}
                       <h3 className="text-3xl font-extrabold">{tech.title}</h3>
@@ -554,7 +560,11 @@ const Home: NextPage = () => {
                     <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
                       {tech.image && (
                         <div className="w-3/5 mx-auto mb-10">
-                          <Image src={tech.image} layout="responsive" />
+                          <Image
+                            alt="Tech Logo"
+                            src={tech.image}
+                            layout="responsive"
+                          />
                         </div>
                       )}
 
@@ -580,7 +590,11 @@ const Home: NextPage = () => {
                 <div className="w-full">
                   <div className={`bg-red-500 p-12 rounded-lg`}>
                     <div className="w-3/5 mx-auto mb-10">
-                      <Image src={AngularLogo} layout="responsive" />
+                      <Image
+                        alt="Angular Logo"
+                        src={AngularLogo}
+                        layout="responsive"
+                      />
                     </div>
 
                     <h3 className="text-3xl font-extrabold">Angular</h3>
