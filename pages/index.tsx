@@ -12,12 +12,14 @@ import Tesla from "../assets/images/tesla.svg";
 import Apple from "../assets/images/apple.svg";
 import Streamr from "../assets/images/streamr.svg";
 import HexLabs from "../assets/images/hexlabs.svg";
+import Bog from "../assets/images/bog.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRightFromBracket,
   faArrowUpRightFromSquare,
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
+import Fade from "react-reveal/Fade";
 
 const Home: NextPage = () => {
   return (
@@ -112,130 +114,318 @@ const Home: NextPage = () => {
                 </g>
               </svg>
             </div> */}
-            <div className="w-full items-center">
-              <h1 className="text-[84px] font-extrabold tracking-tighter">
-                Edmund Xin
-              </h1>
-              <h3 className="text-md">
-                Software developer, student, and super excited about technology.
-              </h3>
-            </div>
-            <div className="w-full flex-col flex items-center gap-4"></div>
+            <Fade duration={2000}>
+              <div className="w-full items-center">
+                <h1 className="text-[84px] font-extrabold tracking-tighter">
+                  Edmund Xin
+                </h1>
+                <h3 className="text-md">
+                  Software developer, student, and super excited about
+                  technology.
+                </h3>
+              </div>
+              <div className="w-full flex-col flex items-center gap-4"></div>
+            </Fade>
           </div>
         </div>
-        <div className="flex flex-col gap-12">
-          <h2 className="font-extrabold text-[48px] -mb-6">Industry</h2>
-          <ExperienceCard className="bg-gradient-to-l from-rose-300 to-rose-400">
-            <div className="w-1/3 z-10 relative">
-              <h3>Aug 2022 - Present</h3>
-              <h2 className="text-5xl font-extrabold mb-4">Tesla</h2>
-              <Image
-                src={Tesla}
-                alt="Tesla Logo"
-                height={75}
-                width={75}
-                className="ml-10"
-              />
-            </div>
-            <div className="z-10 relative">
-              <p className="text-lg">
-                I'm currently a full stack intern for Tesla's Supply Chain
-                Automation team. We're working on an application that helps
-                Global Supply Managers analyze part prices which can help
-                provide information for price negotiation. These tools help to
-                reduce costs throughout the supply chain which allows for
-                cheaper product for Tesla customers.
-              </p>
-            </div>
-          </ExperienceCard>
-          <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 text-right">
-            <div className="z-10 relative">
-              <p className="text-lg">
-                I'm currently a full stack intern for Tesla's Supply Chain
-                Automation team. We're working on an application that helps
-                Global Supply Managers analyze part prices which can help
-                provide information for price negotiation. These tools help to
-                reduce costs throughout the supply chain which allows for
-                cheaper product for Tesla customers.
-              </p>
-            </div>
-            <div className="w-1/3 z-10 relative text-right ml-12">
-              <h3>May 2022 - Aug 2022</h3>
-              <h2 className="text-5xl font-extrabold mb-4">Apple</h2>
-              <Image
-                src={Apple}
-                alt="Apple Logo"
-                height={100}
-                width={81}
-                className="ml-10"
-              />
-            </div>
-          </ExperienceCard>
-          <ExperienceCard className="bg-gradient-to-r from-orange-400 via-violet-500 to-blue-500">
-            <div className="w-1/3 z-10 relative mr-6">
-              <h3>Aug 2022 - Present</h3>
-              <h2 className="text-5xl font-extrabold mb-4">Streamr</h2>
-              <div className="ml-6">
-                <Image src={Streamr} alt="Tesla Logo" height={75} width={75} />
+        <div className="flex flex-col gap-12 w-3/4 mx-auto">
+          <Fade duration={2000} delay={200}>
+            <h2 className="font-extrabold text-[48px] -mb-6">Industry</h2>
+          </Fade>
+          <Fade duration={2000} delay={200}>
+            <ExperienceCard className="bg-gradient-to-l from-rose-300 to-rose-400">
+              <div className="w-1/3 z-10 relative">
+                <h3>Aug 2022 - Present</h3>
+                <h2 className="text-5xl font-extrabold mb-4">Tesla</h2>
+                <Image
+                  src={Tesla}
+                  alt="Tesla Logo"
+                  height={75}
+                  width={75}
+                  className="ml-10"
+                />
               </div>
-            </div>
-            <div className="z-10 relative">
-              <p className="text-lg">
-                I'm currently a full stack intern for Tesla's Supply Chain
-                Automation team. We're working on an application that helps
-                Global Supply Managers analyze part prices which can help
-                provide information for price negotiation. These tools help to
-                reduce costs throughout the supply chain which allows for
-                cheaper product for Tesla customers.
-              </p>
-            </div>
-          </ExperienceCard>
-          <h2 className="font-extrabold text-[48px] -mb-6 mt-6">Clubs</h2>
-          <div className="flex flex-row gap-12">
-            <div className="bg-gradient-to-tr from-violet-600 to-pink-500 w-full rounded-2xl p-1">
-              <div className="bg-neutral-900 w-full h-full rounded-xl px-20 py-14">
-                <a
-                  href="https://hexlabs.org"
-                  className="mb-4 flex flex-row items-center gap-4"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image src={HexLabs} width={300} height={48} />
-                  <FontAwesomeIcon
-                    icon={faArrowUpRightFromSquare}
-                    className="mt-3"
-                    size="lg"
+              <div className="z-10 relative">
+                <p className="text-lg">
+                  I'm currently a full stack intern for Tesla's Supply Chain
+                  Automation team. We're working on an application that helps
+                  Global Supply Managers analyze part prices which can help
+                  provide information for price negotiation. These tools help to
+                  reduce costs throughout the supply chain which allows for
+                  cheaper product for Tesla customers.
+                </p>
+              </div>
+            </ExperienceCard>
+          </Fade>
+          <Fade duration={2000} delay={200}>
+            <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 text-right">
+              <div className="z-10 relative">
+                <p className="text-lg">
+                  I'm currently a full stack intern for Tesla's Supply Chain
+                  Automation team. We're working on an application that helps
+                  Global Supply Managers analyze part prices which can help
+                  provide information for price negotiation. These tools help to
+                  reduce costs throughout the supply chain which allows for
+                  cheaper product for Tesla customers.
+                </p>
+              </div>
+              <div className="w-1/3 z-10 relative text-right ml-12">
+                <h3>May 2022 - Aug 2022</h3>
+                <h2 className="text-5xl font-extrabold mb-4">Apple</h2>
+                <Image
+                  src={Apple}
+                  alt="Apple Logo"
+                  height={100}
+                  width={81}
+                  className="ml-10"
+                />
+              </div>
+            </ExperienceCard>
+          </Fade>
+          <Fade duration={2000} delay={200}>
+            <ExperienceCard className="bg-gradient-to-r from-orange-400 via-violet-500 to-blue-500">
+              <div className="w-1/3 z-10 relative mr-6">
+                <h3>Aug 2022 - Present</h3>
+                <h2 className="text-5xl font-extrabold mb-4">Streamr</h2>
+                <div className="ml-6">
+                  <Image
+                    src={Streamr}
+                    alt="Tesla Logo"
+                    height={75}
+                    width={75}
                   />
-                </a>
+                </div>
+              </div>
+              <div className="z-10 relative">
                 <p className="text-lg">
-                  HexLabs is a club that helps to organizes many events to help
-                  spread our love for technology and ideas. Our flagship event
-                  is HackGT which has 1500+ attendees each year and is the
-                  biggest hackathon in the south. We also host smaller
-                  hackathons throughout the year and also teach high school
-                  students programming concepts with our liftoff learning event
-                  called Catalyst. These events require a suite of applications
-                  and tools to run which are developed and maintained by the
-                  HexLabs Tech Team. I joined in the Spring of 2021 and work
-                  primarily as a full stack developer and project lead.
+                  I'm currently a full stack intern for Tesla's Supply Chain
+                  Automation team. We're working on an application that helps
+                  Global Supply Managers analyze part prices which can help
+                  provide information for price negotiation. These tools help to
+                  reduce costs throughout the supply chain which allows for
+                  cheaper product for Tesla customers.
                 </p>
               </div>
-            </div>
-            <div className="bg-gradient-to-bl from-red-600 to-orange-500 w-full rounded-2xl p-1">
-              <div className="px-20 py-14 rounded-xl w-full h-full bg-neutral-900">
-                <h2 className="font-extrabold text-4xl mb-4">Bits of Good</h2>
-                <p className="text-lg">
-                  HexLabs is a club that helps to organizes many events to help
-                  spread our love for technology and ideas. Our flagship event
-                  is HackGT which has 1500+ attendees each year and is the
-                  biggest hackathon in the south. We also host smaller
-                  hackathons throughout the year and also teach high school
-                  students programming concepts with our liftoff learning event
-                  called Catalyst. These events
-                </p>
+            </ExperienceCard>
+          </Fade>
+          <Fade duration={2000} delay={200}>
+            <h2 className="font-extrabold text-[48px] -mb-6 mt-6">Clubs</h2>
+          </Fade>
+          <div className="flex flex-row gap-12 items-start">
+            <Fade duration={2000} delay={200}>
+              <div className="bg-gradient-to-tr from-violet-600 to-pink-500 w-full rounded-2xl p-1 min-h-fit">
+                <div className="bg-neutral-900 w-full h-full rounded-xl px-20 py-14">
+                  <a
+                    href="https://hexlabs.org"
+                    className="mb-4 flex flex-row items-center gap-4 h-9"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Image src={HexLabs} width={220} height={32} />
+                    <FontAwesomeIcon
+                      icon={faArrowUpRightFromSquare}
+                      className="mt-1 -ml-3"
+                      size="sm"
+                    />
+                  </a>
+                  <p className="text-lg">
+                    HexLabs organizes programming events at Georgia Tech,
+                    including our flagship event HackGT which sees 3200+
+                    applicants and 1500+ participants.
+                  </p>
+                  <div className="w-4/5 mt-6 mx-auto">
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div className="w-px h-24 bg-gradient-to-t from-fuchsia-500 to-neutral-900 ml-[11px]"></div>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div>
+                          <div className="flex items-center justify-center w-6 h-6 bg-fuchsia-500 rounded-full"></div>
+                        </div>
+                        <div className="w-px h-full bg-gradient-to-b from-fuchsia-500 to-purple-500"></div>
+                      </div>
+                      <div className="pb-8 ">
+                        <h4 className="text-xs font-medium text-neutral-300">
+                          Current
+                        </h4>
+                        <h3 className="mb-2 text-lg font-bold text-neutral-300">
+                          Project Lead
+                        </h3>
+                        <p className="text-neutral-300">
+                          Currently leading the migration of our hardware
+                          checkout system, including updating our API and
+                          frontend.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div>
+                          <div className="flex items-center justify-center w-6 h-6 bg-purple-500 rounded-full"></div>
+                        </div>
+                        <div className="w-px h-full bg-gradient-to-b from-purple-500 to-violet-700"></div>
+                      </div>
+                      <div className="pb-8 ">
+                        <h4 className="text-xs font-medium text-neutral-300">
+                          January 2022
+                        </h4>
+                        <h3 className="mb-2 text-lg font-bold text-neutral-300">
+                          Backend Developer
+                        </h3>
+                        <p className="text-neutral-300">
+                          Centralized backend of projects into one monorepo to
+                          support all HexLabs applications.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div>
+                          <div className="flex items-center justify-center w-6 h-6 bg-violet-700 rounded-full"></div>
+                        </div>
+                        <div className="w-px h-full bg-gradient-to-b from-violet-700 to-neutral-900"></div>
+                      </div>
+                      <div className="pb-8">
+                        <h4 className="text-xs font-medium text-neutral-300">
+                          Feburary 2021
+                        </h4>
+                        <h3 className="mb-2 text-lg font-bold text-neutral-300">
+                          Frontend Developer
+                        </h3>
+                        <p className="text-neutral-300">
+                          Worked on HexLab's project judging system to display
+                          table data.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </Fade>
+            <Fade duration={2000} delay={400}>
+              <div className="bg-gradient-to-bl from-red-600 to-orange-500 w-full rounded-2xl p-1 max-h-fit">
+                <div className="px-20 py-14 rounded-xl w-full h-full bg-neutral-900">
+                  <a
+                    href="https://bitsofgood.org"
+                    className="mb-4 flex flex-row items-center gap-4 h-9"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Image src={Bog} height={40} width={210} />
+                    <FontAwesomeIcon
+                      icon={faArrowUpRightFromSquare}
+                      className="mt-1"
+                      size="sm"
+                    />
+                  </a>
+                  <p className="text-lg">
+                    Bits of Good pairs development teams with non-profit
+                    organizations to create web applications to support their
+                    cause. We also maintain internal applications like GT
+                    Scheduler and Bits of Good Component Library.
+                  </p>
+                  <div className="w-4/5 mt-6 mx-auto">
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div className="w-px h-24 bg-gradient-to-t from-red-500 to-neutral-900 ml-[11px]"></div>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div>
+                          <div className="flex items-center justify-center w-6 h-6 bg-red-500 rounded-full"></div>
+                        </div>
+                        <div className="w-px h-full bg-gradient-to-b from-red-500 to-orange-600"></div>
+                      </div>
+                      <div className="pb-8 ">
+                        <h4 className="text-xs font-medium text-neutral-300">
+                          Current
+                        </h4>
+                        <h3 className="mb-2 text-lg font-bold text-neutral-300">
+                          Engineering Manager
+                        </h3>
+                        <p className="text-neutral-300">
+                          Leading Bits of Good's internal tools team which
+                          maintains GT Scheduler and maintenance requests for
+                          previous projects.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div>
+                          <div className="flex items-center justify-center w-6 h-6 bg-orange-600 rounded-full"></div>
+                        </div>
+                        <div className="w-px h-full bg-gradient-to-b from-orange-600 to-amber-600"></div>
+                      </div>
+                      <div className="pb-8 ">
+                        <h4 className="text-xs font-medium text-neutral-300">
+                          August 2022
+                        </h4>
+                        <h3 className="mb-2 text-lg font-bold text-neutral-300">
+                          Product Maintenance
+                        </h3>
+                        <p className="text-neutral-300">
+                          Bits of Good internal team which maintains handed off
+                          projects and internal tools.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div>
+                          <div className="flex items-center justify-center w-6 h-6 bg-amber-600 rounded-full"></div>
+                        </div>
+                        <div className="w-px h-full bg-gradient-to-b from-amber-600 to-yellow-600"></div>
+                      </div>
+                      <div className="pb-8">
+                        <h4 className="text-xs font-medium text-neutral-300">
+                          January 2022
+                        </h4>
+                        <h3 className="mb-2 text-lg font-bold text-neutral-300">
+                          Boys and Girls Club of Metro Atlanta
+                        </h3>
+                        <p className="text-neutral-300">
+                          Developer for mobile app to keep track of bus
+                          transportation of elementary school students to Boys
+                          and Girls Club locations.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <div className="flex flex-col items-center mr-4">
+                        <div>
+                          <div className="flex items-center justify-center w-6 h-6 bg-yellow-600 rounded-full"></div>
+                        </div>
+                        <div className="w-px h-full bg-gradient-to-b from-yellow-600 to-neutral-900"></div>
+                      </div>
+                      <div className="pb-8">
+                        <h4 className="text-xs font-medium text-neutral-300">
+                          September 2021
+                        </h4>
+                        <h3 className="mb-2 text-lg font-bold text-neutral-300">
+                          Healthy Families Healthy Future
+                        </h3>
+                        <p className="text-neutral-300">
+                          Developed website that focuses on providing affordable
+                          and healthy recipes for families in need.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Fade>
           </div>
+        </div>
+        <div className="flex flex-col gap-12 w-3/4 mx-auto mt-16">
+          <Fade duration={2000} delay={200}>
+            <h2 className="font-extrabold text-[48px] -mb-6">
+              Technologies I Love
+            </h2>
+          </Fade>
         </div>
       </Layout>
     </div>
