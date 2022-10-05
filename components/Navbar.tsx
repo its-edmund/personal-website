@@ -51,7 +51,7 @@ const Navbar = ({ isSticky }: NavbarProps) => {
             currentRoute === "/resume" ? "bg-white text-black" : "text-white"
           }`}
         >
-          About
+          Resume
         </a>
       </Link>
       <Link href="/blog">
