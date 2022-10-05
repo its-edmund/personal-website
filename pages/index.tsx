@@ -203,10 +203,10 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="flex flex-col gap-12 w-3/4 mx-auto">
-          <Fade duration={2000} delay={200}>
+          <Fade duration={2000}>
             <h2 className="font-extrabold text-[48px] -mb-6">Industry</h2>
           </Fade>
-          <Fade duration={2000} delay={200}>
+          <Fade duration={2000}>
             <ExperienceCard className="bg-gradient-to-l from-rose-300 to-rose-400">
               <div className="w-1/4 z-10 relative">
                 <h3>Aug 2022 - Present</h3>
@@ -231,7 +231,7 @@ const Home: NextPage = () => {
               </div>
             </ExperienceCard>
           </Fade>
-          <Fade duration={2000} delay={200}>
+          <Fade duration={2000}>
             <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 text-right">
               <div className="z-10 relative w-full">
                 <p className="text-lg">A</p>
@@ -249,7 +249,7 @@ const Home: NextPage = () => {
               </div>
             </ExperienceCard>
           </Fade>
-          <Fade duration={2000} delay={200}>
+          <Fade duration={2000}>
             <ExperienceCard className="bg-gradient-to-r from-orange-400 via-violet-500 to-blue-500">
               <div className="w-1/4 z-10 relative mr-6">
                 <h3>May 2021 - Aug 2021</h3>
@@ -275,11 +275,11 @@ const Home: NextPage = () => {
               </div>
             </ExperienceCard>
           </Fade>
-          <Fade duration={2000} delay={200}>
+          <Fade duration={2000}>
             <h2 className="font-extrabold text-[48px] -mb-6 mt-6">Clubs</h2>
           </Fade>
           <div className="flex flex-row gap-12 items-start mb-12">
-            <Fade duration={2000} delay={200}>
+            <Fade duration={2000}>
               <div className="bg-gradient-to-tr from-violet-600 to-pink-500 w-full rounded-2xl p-1 min-h-fit">
                 <div className="bg-neutral-900 w-full h-full rounded-xl px-20 py-14">
                   <a
@@ -493,7 +493,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="flex flex-col gap-12 w-3/4 mx-auto mt-16">
-          <Fade duration={2000} delay={200}>
+          <Fade duration={2000}>
             <h2 className="font-extrabold text-[48px] -mb-6">
               Technologies I Love
             </h2>
