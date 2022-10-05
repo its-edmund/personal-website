@@ -33,7 +33,7 @@ interface Technology {
   title: String;
   description: String;
   backgroundColor: String;
-  image?: String;
+  image?: string;
 }
 
 const Technologies: Technology[] = [

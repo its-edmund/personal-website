@@ -3,7 +3,7 @@ import { useSticky } from "../hooks/useSticky";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
   const { isSticky, sentinel } = useSticky();
 
   useEffect(() => {
