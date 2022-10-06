@@ -190,7 +190,7 @@ const Home: NextPage = () => {
             </div> */}
             <Fade duration={1500}>
               <div className="w-full items-center">
-                <h1 className="text-xl md:text-8xl font-extrabold tracking-tighter md:whitespace-nowrap">
+                <h1 className="text-5xl md:text-8xl font-extrabold tracking-tighter whitespace-nowrap mb-4 md:mb-0">
                   Edmund Xin
                 </h1>
                 <h3 className="text-lg font-medium">
