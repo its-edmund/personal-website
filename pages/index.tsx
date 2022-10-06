@@ -28,11 +28,12 @@ import VimLogo from "../assets/images/vim.svg";
 import NodeLogo from "../assets/images/node.svg";
 import VueLogo from "../assets/images/vue.svg";
 import AngularLogo from "../assets/images/angular.svg";
+import React from "react";
 
 interface Technology {
-  title: String;
-  description: String;
-  backgroundColor: String;
+  title: string | JSX.Element;
+  description: string;
+  backgroundColor: string;
   image?: string;
 }
 
@@ -52,7 +53,7 @@ const Technologies: Technology[] = [
     image: TailwindLogo,
   },
   {
-    title: "Express",
+    title: <h3 className="text-3xl font-thin font-['Helvetica']">Express</h3>,
     description:
       "Lightweight backend server that introduced me to backend programming.",
     backgroundColor: "bg-black",
@@ -575,7 +576,13 @@ const Home: NextPage = () => {
                         </div>
                       )}
 
-                      <h3 className="text-3xl font-extrabold">{tech.title}</h3>
+                      {React.isValidElement(tech.title) ? (
+                        tech.title
+                      ) : (
+                        <h3 className="text-3xl font-extrabold">
+                          {tech.title}
+                        </h3>
+                      )}
                       <p>{tech.description}</p>
                     </div>
                   </Fade>

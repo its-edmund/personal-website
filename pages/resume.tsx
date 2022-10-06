@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import { useState } from "react";
 import Layout from "../components/Layout";
-import ResumeFile from "/public/files/Edmund_Xin_Resume.pdf";
 
 interface EntryProps {
   title: string;
