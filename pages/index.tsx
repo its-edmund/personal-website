@@ -170,7 +170,7 @@ const Home: NextPage = () => {
               </g>
             </svg>
           </div>
-          <div className="flex flex-row h-full items-center w-3/4 mx-auto">
+          <div className="flex flex-row h-full items-center w-full md:w-3/4 mx-auto">
             {/* <div className="overflow-hidden z-0">
               <svg
                 id="visual"
@@ -190,11 +190,9 @@ const Home: NextPage = () => {
             </div> */}
             <Fade duration={1500}>
               <div className="w-full items-center">
-                <div className="flex flex-row">
-                  <h1 className="text-[84px] font-extrabold tracking-tighter -mb-4">
-                    Edmund Xin
-                  </h1>
-                </div>
+                <h1 className="text-xl md:text-8xl font-extrabold tracking-tighter md:whitespace-nowrap">
+                  Edmund Xin
+                </h1>
                 <h3 className="text-lg font-medium">
                   Current SWE Intern @ Tesla | Student @ Georgia Tech
                 </h3>
@@ -203,22 +201,20 @@ const Home: NextPage = () => {
             </Fade>
           </div>
         </div>
-        <div className="flex flex-col gap-12 w-3/4 mx-auto">
+        <div className="flex flex-col gap-12 md:w-3/4 mx-auto w-full">
           <Fade duration={1500}>
             <h2 className="font-extrabold text-[48px] -mb-6">Industry</h2>
           </Fade>
           <Fade duration={1500}>
             <ExperienceCard className="bg-gradient-to-l from-rose-300 to-rose-400">
-              <div className="w-1/4 z-10 relative">
+              <div className="md:w-1/4 z-10 relative">
                 <h3>Aug 2022 - Present</h3>
-                <h2 className="text-5xl font-extrabold mb-4">Tesla</h2>
-                <Image
-                  src={Tesla}
-                  alt="Tesla Logo"
-                  height={75}
-                  width={75}
-                  className="ml-10"
-                />
+                <div className="flex md:flex-col flex-row mb-4 md:mb-0 items-center md:items-start">
+                  <h2 className="text-5xl font-extrabold md:mb-4">Tesla</h2>
+                  <div className="h-8 w-8 ml-4 md:w-12 md:h-auto">
+                    <Image src={Tesla} alt="Tesla Logo" layout="responsive" />
+                  </div>
+                </div>
               </div>
               <div className="z-10 relative w-full">
                 <p className="text-lg">
@@ -233,7 +229,7 @@ const Home: NextPage = () => {
             </ExperienceCard>
           </Fade>
           <Fade duration={1500}>
-            <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 text-right">
+            <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 flex-col-reverse">
               <div className="z-10 relative w-full">
                 <p className="text-lg">
                   At Apple, I worked on a no-code tool written in Vue which
@@ -244,31 +240,30 @@ const Home: NextPage = () => {
                   appear.
                 </p>
               </div>
-              <div className="w-1/4 z-10 relative text-right ml-12">
+              <div className="md:w-1/4 z-10 relative text-left md:text-right md:ml-12">
                 <h3>May 2022 - Aug 2022</h3>
-                <h2 className="text-5xl font-extrabold mb-4">Apple</h2>
-                <Image
-                  src={Apple}
-                  alt="Apple Logo"
-                  height={100}
-                  width={81}
-                  className="ml-10"
-                />
+                <div className="flex flex-row md:flex-col items-center md:items-end mb-4 md:mb-0">
+                  <h2 className="text-5xl font-extrabold md:mb-4">Apple</h2>
+                  <div className="w-8 md:w-12 md:h-auto ml-4 md:ml-0">
+                    <Image src={Apple} alt="Apple Logo" layout="responsive" />
+                  </div>
+                </div>
               </div>
             </ExperienceCard>
           </Fade>
           <Fade duration={1500}>
             <ExperienceCard className="bg-gradient-to-r from-orange-400 via-violet-500 to-blue-500">
-              <div className="w-1/4 z-10 relative mr-6">
+              <div className="w-full md:w-1/4 z-10 relative mr-6">
                 <h3>May 2021 - Aug 2021</h3>
-                <h2 className="text-5xl font-extrabold mb-4">Streamr</h2>
-                <div className="ml-6">
-                  <Image
-                    src={Streamr}
-                    alt="Tesla Logo"
-                    height={75}
-                    width={75}
-                  />
+                <div className="flex flex-row md:flex-col items-center md:items-start mb-4 md:mb-0">
+                  <h2 className="text-5xl font-extrabold md:mb-4">Streamr</h2>
+                  <div className="w-8 md:w-12 md:h-auto ml-2 md:ml-0">
+                    <Image
+                      src={Streamr}
+                      alt="Streamr Logo"
+                      layout="responsive"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="z-10 relative w-full">
@@ -286,10 +281,10 @@ const Home: NextPage = () => {
           <Fade duration={1500}>
             <h2 className="font-extrabold text-[48px] -mb-6 mt-6">Clubs</h2>
           </Fade>
-          <div className="flex flex-row gap-12 items-start mb-12">
+          <div className="flex flex-col md:flex-row gap-12 items-start mb-12">
             <Fade duration={1500}>
               <div className="bg-gradient-to-tr from-violet-600 to-pink-500 w-full rounded-2xl p-1 min-h-fit">
-                <div className="bg-neutral-900 w-full h-full rounded-xl px-20 py-14">
+                <div className="bg-neutral-900 w-full h-full rounded-xl md:px-20 px-8 py-8 md:py-14">
                   <a
                     href="https://hexlabs.org"
                     className="mb-4 flex flex-row items-center gap-4 h-9"
@@ -386,7 +381,7 @@ const Home: NextPage = () => {
             </Fade>
             <Fade duration={1500} delay={400}>
               <div className="bg-gradient-to-bl from-red-600 to-orange-500 w-full rounded-2xl p-1 max-h-fit">
-                <div className="px-20 py-14 rounded-xl w-full h-full bg-neutral-900">
+                <div className="bg-neutral-900 w-full h-full rounded-xl md:px-20 px-8 py-8 md:py-14">
                   <a
                     href="https://bitsofgood.org"
                     className="mb-4 flex flex-row items-center gap-4 h-9"
@@ -500,13 +495,13 @@ const Home: NextPage = () => {
             </Fade>
           </div>
         </div>
-        <div className="flex flex-col gap-12 w-3/4 mx-auto mt-16">
+        <div className="flex flex-col gap-12 md:w-3/4 mx-auto mt-16">
           <Fade duration={1500}>
             <h2 className="font-extrabold text-[48px] -mb-6">
               Technologies I Love
             </h2>
           </Fade>
-          <div className="flex flex-row w-full items-start gap-8">
+          <div className="flex flex-col md:flex-row w-full items-start gap-8">
             <div className="flex flex-col w-full justify-start gap-8">
               {Technologies.map((tech, i) => {
                 if (i % 3 !== 0) {
@@ -515,17 +510,23 @@ const Home: NextPage = () => {
 
                 return (
                   <Fade key={tech.title}>
-                    <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
-                      {tech.image && (
-                        <div className="w-3/5 mx-auto mb-10">
-                          <Image
-                            alt="Tech Logo"
-                            src={tech.image}
-                            layout="responsive"
-                          />
-                        </div>
-                      )}
-                      <h3 className="text-3xl font-extrabold">{tech.title}</h3>
+                    <div
+                      className={`${tech.backgroundColor} p-8 md:p-12 rounded-lg`}
+                    >
+                      <div className="flex flex-row-reverse md:flex-col md:items-start items-center w-full mb-4">
+                        {tech.image && (
+                          <div className="w-12 mr-auto ml-4 md:w-3/5 md:mx-auto md:mb-10">
+                            <Image
+                              alt="Tech Logo"
+                              src={tech.image}
+                              layout="responsive"
+                            />
+                          </div>
+                        )}
+                        <h3 className="text-3xl font-extrabold">
+                          {tech.title}
+                        </h3>
+                      </div>
                       <p>{tech.description}</p>
                     </div>
                   </Fade>
@@ -541,16 +542,20 @@ const Home: NextPage = () => {
                 return (
                   <Fade key={tech.title}>
                     <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
-                      {tech.image && (
-                        <div className="w-3/5 mx-auto mb-10">
-                          <Image
-                            alt="Tech Logo"
-                            src={tech.image}
-                            layout="responsive"
-                          />
-                        </div>
-                      )}
-                      <h3 className="text-3xl font-extrabold">{tech.title}</h3>
+                      <div className="flex flex-row-reverse md:flex-col md:items-start items-center w-full mb-4">
+                        {tech.image && (
+                          <div className="w-12 mr-auto ml-4 md:w-3/5 md:mx-auto md:mb-10">
+                            <Image
+                              alt="Tech Logo"
+                              src={tech.image}
+                              layout="responsive"
+                            />
+                          </div>
+                        )}
+                        <h3 className="text-3xl font-extrabold">
+                          {tech.title}
+                        </h3>
+                      </div>
                       <p>{tech.description}</p>
                     </div>
                   </Fade>
@@ -566,23 +571,25 @@ const Home: NextPage = () => {
                 return (
                   <Fade key={tech.title}>
                     <div className={`${tech.backgroundColor} p-12 rounded-lg`}>
-                      {tech.image && (
-                        <div className="w-3/5 mx-auto mb-10">
-                          <Image
-                            alt="Tech Logo"
-                            src={tech.image}
-                            layout="responsive"
-                          />
-                        </div>
-                      )}
+                      <div className="flex flex-row-reverse md:flex-col md:items-start items-center w-full mb-4">
+                        {tech.image && (
+                          <div className="w-12 mr-auto ml-4 md:w-3/5 md:mx-auto md:mb-10">
+                            <Image
+                              alt="Tech Logo"
+                              src={tech.image}
+                              layout="responsive"
+                            />
+                          </div>
+                        )}
 
-                      {React.isValidElement(tech.title) ? (
-                        tech.title
-                      ) : (
-                        <h3 className="text-3xl font-extrabold">
-                          {tech.title}
-                        </h3>
-                      )}
+                        {React.isValidElement(tech.title) ? (
+                          tech.title
+                        ) : (
+                          <h3 className="text-3xl font-extrabold">
+                            {tech.title}
+                          </h3>
+                        )}
+                      </div>
                       <p>{tech.description}</p>
                     </div>
                   </Fade>
@@ -601,22 +608,22 @@ const Home: NextPage = () => {
             </h2>
             <Fade>
               <div className="flex flex-row gap-8">
-                <div className="w-full">
-                  <div className={`bg-red-500 p-12 rounded-lg`}>
-                    <div className="w-3/5 mx-auto mb-10">
-                      <Image
-                        alt="Angular Logo"
-                        src={AngularLogo}
-                        layout="responsive"
-                      />
-                    </div>
+                <div className="w-full md:w-1/3 md:pr-8">
+                  <div className={`bg-red-500 p-8 md:p-12 rounded-lg`}>
+                    <div className="flex flex-row-reverse md:flex-col md:items-start items-center mb-4">
+                      <div className="w-12 ml-4 mr-auto md:w-3/5 md:mx-auto md:mb-10">
+                        <Image
+                          alt="Angular Logo"
+                          src={AngularLogo}
+                          layout="responsive"
+                        />
+                      </div>
 
-                    <h3 className="text-3xl font-extrabold">Angular</h3>
+                      <h3 className="text-3xl font-extrabold">Angular</h3>
+                    </div>
                     <p>Do I need to elaborate?</p>
                   </div>
                 </div>
-                <div className="w-full"></div>
-                <div className="w-full"></div>
               </div>
             </Fade>
           </Fade>

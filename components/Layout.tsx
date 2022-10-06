@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
     <>
       {sentinel}
       <Navbar isSticky={isSticky} />
-      <main className="px-32">{children}</main>
+      <main className="md:px-32 px-8">{children}</main>
       <Footer />
     </>
   );
