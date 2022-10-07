@@ -379,7 +379,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </Fade>
-            <Fade duration={1500} delay={400}>
+            <Fade duration={1500} delay={200}>
               <div className="bg-gradient-to-bl from-red-600 to-orange-500 w-full rounded-2xl p-1 max-h-fit">
                 <div className="bg-neutral-900 w-full h-full rounded-xl md:px-20 px-8 py-8 md:py-14">
                   <a

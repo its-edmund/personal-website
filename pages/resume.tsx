@@ -23,9 +23,9 @@ const Entry: NextPage<EntryProps> = ({
 }: EntryProps) => {
   return (
     <div className="mb-6">
-      <div className="flex flex-row text-xl">
+      <div className="flex lg:flex-row flex-col w-full font-medium text-xl">
         <div>
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row">
             <h6
               className={`text-2xl font-extrabold ${
                 gradient ? "text-transparent bg-clip-text " + gradient : ""
@@ -37,7 +37,7 @@ const Entry: NextPage<EntryProps> = ({
           </div>
           <p>{role}</p>
         </div>
-        <div className="flex flex-col ml-auto text-right">
+        <div className="flex flex-col lg:ml-auto lg:text-right">
           <h6>{dateRange}</h6>
           <p>{location}</p>
         </div>
@@ -59,8 +59,8 @@ const Resume: NextPage = () => {
   const [downloadButtonHover, setDownloadButtonHover] = useState(false);
   return (
     <Layout>
-      <div className="px-64 py-16">
-        <div className="flex flex-row justify-between">
+      <div className="px-2 xl:px-48 py-16 w-full">
+        <div className="flex flex-col md:flex-row justify-between">
           <div className="flex flex-col">
             <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-400">
               Edmund Xin
@@ -69,17 +69,19 @@ const Resume: NextPage = () => {
               Software Engineering Intern & Student
             </h4>
           </div>
-          <div className="flex flex-col text-right">
+          <div className="flex flex-col md:text-right">
             <p>📩: edmund@gatech.edu</p>
             <p>📲: 913-617-0133</p>
             <p>🏡: San Jose</p>
           </div>
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-row pt-12 text-xl">
-            <h5 className="w-1/4 text-2xl font-extrabold">Education</h5>
+          <div className="flex flex-col lg:flex-row pt-12 text-xl">
+            <h5 className="w-1/4 text-2xl font-extrabold mb-2 lg:mb-0">
+              Education
+            </h5>
             <div className="flex flex-col w-full">
-              <div className="flex flex-row text-lg">
+              <div className="flex flex-col lg:flex-row text-xl font-medium">
                 <div>
                   <div className="flex flex-row">
                     <h6 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#B3A369] to-amber-400 mr-2">
@@ -89,9 +91,9 @@ const Resume: NextPage = () => {
                   </div>
                   <p>B.S. in Computer Science</p>
                 </div>
-                <div className="flex flex-col ml-auto text-right">
+                <div className="flex flex-col lg:ml-auto lg:text-right">
                   <h6>Aug 2020 - May 2024</h6>
-                  <p>B.S. in Computer Science</p>
+                  <p>Atlanta, GA</p>
                 </div>
               </div>
 
@@ -102,8 +104,10 @@ const Resume: NextPage = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-row py-12 text-xl">
-            <h5 className="w-1/4 text-2xl font-extrabold">Experience</h5>
+          <div className="flex flex-col lg:flex-row py-12 text-xl">
+            <h5 className="w-1/4 text-2xl font-extrabold mb-2 lg:mb-0">
+              Experience
+            </h5>
             <div className="flex flex-col w-full">
               <Entry
                 title="Tesla"
