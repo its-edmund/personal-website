@@ -191,17 +191,15 @@ const Resume: NextPage = () => {
             window.open("/Edmund_Xin_Resume.pdf");
           }}
         >
-          <div className="bg-gradient-to-r from-violet-400 to-pink-500 max-w-fit mx-auto rounded-full font-bold text-xl flex">
+          <div className="bg-gradient-to-r from-violet-600 to-fuchsia-500 max-w-fit mx-auto rounded-[8.5px] font-bold text-xl flex shadow-[0_0_45px_0px_rgba(195,0,240,0.3)]">
             <div
-              className={`px-8 py-3 w-full h-full rounded-full bg-neutral-900 flex-1 m-1 ${
+              className={`px-8 py-3 w-full h-full rounded-[7px] bg-neutral-900 flex-1 m-[2px] ${
                 downloadButtonHover ? "bg-transparent" : ""
               } transition-colors`}
             >
               <h6
                 className={`whitespace-nowrap transition-colors ${
-                  !downloadButtonHover
-                    ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-pink-500"
-                    : "text-white"
+                  !downloadButtonHover ? "text-white" : "text-black"
                 }`}
               >
                 Download a Copy
