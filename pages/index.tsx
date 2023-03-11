@@ -602,7 +602,7 @@ const Home: NextPage = () => {
               And more! I love learning new technologies!
             </h4>
           </Fade>
-          <Fade>
+          {/* <Fade>
             <h2 className="font-extrabold text-[48px] -mb-6">
               Technologies I Hate
             </h2>
@@ -626,7 +626,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </Fade>
-          </Fade>
+          </Fade> */}
         </div>
       </Layout>
     </div>
