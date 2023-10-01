@@ -5,15 +5,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
 const DarkModeToggle = () => {
-    const [isDarkMode, setIsDarkMode] = useState(localStorage.theme === 'dark');
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        if (isDarkMode) {
-            document.documentElement.classList.add("dark")
-            localStorage.theme = 'dark'
-        } else {
-            document.documentElement.classList.remove("dark")
-            localStorage.theme = 'light'
+        if (typeof window !== 'undefined') {
+            setIsDarkMode(localStorage.theme === 'dark');
+        }
+    }, [])
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            if (isDarkMode) {
+                document.documentElement.classList.add("dark")
+                localStorage.theme = 'dark'
+            } else {
+                document.documentElement.classList.remove("dark")
+                localStorage.theme = 'light'
+            }
         }
     }, [isDarkMode])
 

@@ -4,6 +4,10 @@ import { Inter } from 'next/font/google'
 import Sidebar from './_components/Sidebar'
 import AltSidebar from './_components/AltSidebar'
 import Noise from './_components/Noise'
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false; /* eslint-disable import/first */
 
 const inter = Inter({ subsets: ['latin'] })
 
