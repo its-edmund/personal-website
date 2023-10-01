@@ -1,6 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Sidebar from './_components/Sidebar'
+import AltSidebar from './_components/AltSidebar'
+import Noise from './_components/Noise'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* <Noise /> */}
+        <div className='transition-colors flex flex-row h-screen w-screen bg-stone-200 dark:bg-stone-900 font-diatype text-stone-600 dark:text-stone-200 text-sm'>
+          <Sidebar />
+          {children}
+          <AltSidebar />
+        </div>
+      </body>
     </html>
   )
 }
