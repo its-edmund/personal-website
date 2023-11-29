@@ -1,11 +1,15 @@
 import { NextPage } from "next";
 import Image from "next/image";
+import { useState } from "react";
 import Layout from "../components/Layout";
 
 const Blog: NextPage = () => {
+  const [downloadButtonHover, setDownloadButtonHover] = useState(false);
+
   return (
     <Layout>
-      <div className="px-12">
+      {
+        /*<div className="px-12">
         <h1 className="text-[64px] font-extrabold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-400">
           Blog
         </h1>
@@ -29,6 +33,33 @@ const Blog: NextPage = () => {
             </div>
           </div>
         </div>
+      </div>*/
+      }
+      <div className="w-full flex items-center align-center pt-24">
+        <button
+          className="min-w-fit mx-auto"
+          onMouseEnter={() => setDownloadButtonHover(true)}
+          onMouseLeave={() => setDownloadButtonHover(false)}
+          onClick={() => {
+            window.open("/Cover_Letter.pdf");
+          }}
+        >
+          <div className="bg-gradient-to-r from-violet-600 to-fuchsia-500 max-w-fit mx-auto rounded-[8.5px] font-bold text-xl flex shadow-[0_0_45px_0px_rgba(195,0,240,0.3)]">
+            <div
+              className={`px-8 py-3 w-full h-full rounded-[7px] bg-neutral-900 flex-1 m-[2px] ${
+                downloadButtonHover ? "bg-transparent" : ""
+              } transition-colors`}
+            >
+              <h6
+                className={`whitespace-nowrap transition-colors ${
+                  !downloadButtonHover ? "text-white" : "text-black"
+                }`}
+              >
+                Download a Copy
+              </h6>
+            </div>
+          </div>
+        </button>
       </div>
     </Layout>
   );

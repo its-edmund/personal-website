@@ -31,28 +31,30 @@ const Entry: NextPage<EntryProps> = ({
         onChange={(e) => setIsOpen(e.target.checked)}
       />
       <div className="collapse-title flex lg:flex-row flex-col w-full font-medium text-xl">
-        <div className="mr-4 w-3 text-xl">
-          {isOpen ? <h3>-</h3> : <h3>+</h3>}
-        </div>
-        <div>
-          <div className="flex flex-row">
-            <h6
-              className={`text-2xl font-extrabold ${
-                gradient ? "text-transparent bg-clip-text " + gradient : ""
-              } mr-2`}
-            >
-              {title}
-            </h6>
-            {icon}
+        <div className="flex lg:flex-row flex-col">
+          <div className="flex flex-col">
+            <div className="flex flex-row">
+              <h6
+                className={`text-2xl font-extrabold ${
+                  gradient ? "text-transparent bg-clip-text " + gradient : ""
+                } mr-2`}
+              >
+                {title}
+              </h6>
+              {icon}
+            </div>
+            <p>{role}</p>
           </div>
-          <p>{role}</p>
         </div>
         <div className="flex flex-col lg:ml-auto lg:text-right">
           <h6>{dateRange}</h6>
           <p>{location}</p>
         </div>
+        <div className="mx-6 w-3 text-2xl font-bold mt-2">
+          {isOpen ? <h3>-</h3> : <h3>+</h3>}
+        </div>
       </div>
-      <div className="collapse-content mt-4 pl-6 text-md font-light">
+      <div className="collapse-content mt-4 pl-6 pr-8 text-md font-light">
         <ul className="list-disc">
           {content.map((sent) => {
             return <li key={sent}>{sent}</li>;
@@ -74,11 +76,11 @@ const Resume: NextPage = () => {
               Edmund Xin
             </h2>
             <h4 className="text-xl font-medium">
-              Software Engineering Intern & Student
+              Software Engineer
             </h4>
           </div>
           <div className="flex flex-col md:text-right">
-            <p>📩: edmund@gatech.edu</p>
+            <p>📩: edmundxin02@gmail.com</p>
             <p>📲: 913-617-0133</p>
             <p>🏡: San Jose</p>
           </div>
