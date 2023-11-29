@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 
 const Blog: NextPage = () => {
   const [downloadButtonHover, setDownloadButtonHover] = useState(false);
+  const [password, setPassword] = useState("");
 
   return (
     <Layout>
@@ -35,13 +36,21 @@ const Blog: NextPage = () => {
         </div>
       </div>*/
       }
-      <div className="w-full flex items-center align-center pt-24">
+      <div className="w-full flex flex-col gap-4 items-center align-center pt-24">
+        <input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          className="outline-none rounded-md text-2xl px-2 py-1"
+        />
         <button
           className="min-w-fit mx-auto"
           onMouseEnter={() => setDownloadButtonHover(true)}
           onMouseLeave={() => setDownloadButtonHover(false)}
           onClick={() => {
-            window.open("/Cover_Letter.pdf");
+            if (password == "password") {
+              window.open("/Cover_Letter.pdf");
+            }
           }}
         >
           <div className="bg-gradient-to-r from-violet-600 to-fuchsia-500 max-w-fit mx-auto rounded-[8.5px] font-bold text-xl flex shadow-[0_0_45px_0px_rgba(195,0,240,0.3)]">
