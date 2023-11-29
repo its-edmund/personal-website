@@ -31,7 +31,7 @@ const Navbar = ({ isSticky }: NavbarProps) => {
         console.log(e.isIntersecting);
         return setStuck(e.isIntersecting);
       },
-      { threshold: [1] }
+      { threshold: [1] },
     );
     observer.observe(cachedRef!);
     return () => observer.unobserve(cachedRef!);
@@ -43,8 +43,8 @@ const Navbar = ({ isSticky }: NavbarProps) => {
 
   return (
     <div
-      className={`transition-all max-h-fit sticky top-0 w-screen md:h-16 md:bg-[rgba(81, 81, 81, .5)] bg-[rgba(0, 0, 0, 1)] backdrop-filter backdrop-blur-md z-[101] flex md:flex-row flex-col justify-center items-end md:items-center ${
-        isSticky ? "border-b border-neutral-800" : "border-none"
+      className={`transition-all max-h-fit sticky top-0 w-screen md:h-16 md:bg-[rgba(81, 81, 81, .5)] bg-[rgba(0, 0, 0, 1)] backdrop-filter backdrop-blur-md z-[101] flex md:flex-row flex-col justify-center items-end md:items-center border-neutral-800 ${
+        isSticky ? "border-b" : "border-none"
       }`}
       ref={ref}
     >
@@ -128,10 +128,10 @@ const Navbar = ({ isSticky }: NavbarProps) => {
               currentRoute === "/blog" ? "bg-white text-black" : "text-white"
             }`}
           >
-            Blog
+            Cover Letter
           </a>
         </Link>
-        <Link href="/projects">
+        <Link href="https://github.com/its-edmund">
           <a
             className={`px-6 py-1 rounded-full hover:bg-white hover:text-black transition-colors ${
               currentRoute === "/projects"
