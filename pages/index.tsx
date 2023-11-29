@@ -40,7 +40,7 @@ interface Technology {
 const Technologies: Technology[] = [
   {
     title: "React",
-    description: "React is how I started my software engineering career.",
+    description: "JavaScript Library",
     backgroundColor: "bg-cyan-400",
     image: ReactLogo,
   },
@@ -48,14 +48,14 @@ const Technologies: Technology[] = [
   {
     title: "Tailwind CSS",
     description:
-      "Anytime I need to style components, this is my go-to library.",
+      "CSS styling library",
     backgroundColor: "bg-blue-600",
     image: TailwindLogo,
   },
   {
     title: <h3 className="text-3xl font-thin font-['Helvetica']">Express</h3>,
     description:
-      "Lightweight backend server that introduced me to backend programming.",
+      "Lightweight backend library",
     backgroundColor: "bg-black",
   },
   {
@@ -66,31 +66,31 @@ const Technologies: Technology[] = [
   },
   {
     title: "Python",
-    description: "My favorite scripting language and what I use for Leetcode.",
+    description: "Scripting Language",
     backgroundColor: "bg-yellow-500",
     image: PythonLogo,
   },
   {
     title: "TypeScript",
-    description: "TypeScript > JavaScript, IYKYK",
+    description: "Staticlly Typed JavaScript",
     backgroundColor: "bg-blue-400",
     image: TypescriptLogo,
   },
   {
     title: "Vim",
-    description: "I cannot live without Vim",
+    description: "Very cool editor",
     backgroundColor: "bg-green-400",
     image: VimLogo,
   },
   {
     title: "Vue",
-    description: "Secondary JavaScript Library",
+    description: "JavaScript Library",
     backgroundColor: "bg-teal-400",
     image: VueLogo,
   },
   {
     title: "TanStack",
-    description: "React Table and React Query are the best!",
+    description: "React state management and data fetching",
     backgroundColor: "bg-blue-900",
   },
 ];
