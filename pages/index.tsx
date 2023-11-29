@@ -210,9 +210,32 @@ const Home: NextPage = () => {
             <h2 className="font-extrabold text-[48px] -mb-6">Experience</h2>
           </Fade>
           <Fade duration={1500}>
+            <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 flex-col-reverse">
+              <div className="z-10 relative w-full">
+                <p className="text-lg">
+                  At Apple, I worked on a no-code tool written in Vue which
+                  would allow Apple Business Stakeholders create their own chat
+                  widget to integrate with their website. This drag-and-drop
+                  tool configures the design and then a JavaScript SDK it
+                  imported into the HTML file which will make the chat window
+                  appear.
+                </p>
+              </div>
+              <div className="md:w-1/4 z-10 relative text-left md:text-right md:ml-12">
+                <h3>May 2023 - Aug 2023</h3>
+                <div className="flex flex-row md:flex-col items-center md:items-end mb-4 md:mb-0">
+                  <h2 className="text-5xl font-extrabold md:mb-4">Apple</h2>
+                  <div className="w-8 md:w-12 md:h-auto ml-4 md:ml-0">
+                    <Image src={Apple} alt="Apple Logo" layout="responsive" />
+                  </div>
+                </div>
+              </div>
+            </ExperienceCard>
+          </Fade>
+          <Fade duration={1500}>
             <ExperienceCard className="bg-gradient-to-l from-rose-300 to-rose-400">
               <div className="md:w-1/4 z-10 relative mr-8">
-                <h3>Aug 2022 - Present</h3>
+                <h3>Aug 2022 - Dec 2023</h3>
                 <div className="flex md:flex-col flex-row mb-4 md:mb-0 items-center md:items-start">
                   <h2 className="text-5xl font-extrabold md:mb-4">Tesla</h2>
                   <div className="h-8 w-8 ml-4 md:w-12 md:h-auto">
@@ -229,29 +252,6 @@ const Home: NextPage = () => {
                   costs throughout the supply chain which allows for cheaper
                   product for Tesla customers.
                 </p>
-              </div>
-            </ExperienceCard>
-          </Fade>
-          <Fade duration={1500}>
-            <ExperienceCard className="bg-gradient-to-r from-rose-100 to-teal-100 text-neutral-900 flex-col-reverse">
-              <div className="z-10 relative w-full">
-                <p className="text-lg">
-                  At Apple, I worked on a no-code tool written in Vue which
-                  would allow Apple Business Stakeholders create their own chat
-                  widget to integrate with their website. This drag-and-drop
-                  tool configures the design and then a JavaScript SDK it
-                  imported into the HTML file which will make the chat window
-                  appear.
-                </p>
-              </div>
-              <div className="md:w-1/4 z-10 relative text-left md:text-right md:ml-12">
-                <h3>May 2022 - Aug 2022</h3>
-                <div className="flex flex-row md:flex-col items-center md:items-end mb-4 md:mb-0">
-                  <h2 className="text-5xl font-extrabold md:mb-4">Apple</h2>
-                  <div className="w-8 md:w-12 md:h-auto ml-4 md:ml-0">
-                    <Image src={Apple} alt="Apple Logo" layout="responsive" />
-                  </div>
-                </div>
               </div>
             </ExperienceCard>
           </Fade>
