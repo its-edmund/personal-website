@@ -1,3 +1,4 @@
+import { Disclosure, Transition } from "@headlessui/react";
 import { NextPage } from "next";
 import { useState } from "react";
 import Layout from "../components/Layout";
@@ -21,9 +22,18 @@ const Entry: NextPage<EntryProps> = ({
   gradient,
   icon,
 }: EntryProps) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="mb-6">
-      <div className="flex lg:flex-row flex-col w-full font-medium text-xl">
+    <div className="mb-6 collapse">
+      <input
+        type="checkbox"
+        checked={isOpen}
+        onChange={(e) => setIsOpen(e.target.checked)}
+      />
+      <div className="collapse-title flex lg:flex-row flex-col w-full font-medium text-xl">
+        <div className="mr-4 w-3 text-xl">
+          {isOpen ? <h3>-</h3> : <h3>+</h3>}
+        </div>
         <div>
           <div className="flex flex-row">
             <h6
@@ -42,15 +52,13 @@ const Entry: NextPage<EntryProps> = ({
           <p>{location}</p>
         </div>
       </div>
-
-      <div className="mt-4 pl-6 text-md font-light">
+      <div className="collapse-content mt-4 pl-6 text-md font-light">
         <ul className="list-disc">
           {content.map((sent) => {
             return <li key={sent}>{sent}</li>;
           })}
         </ul>
       </div>
-      <p className="mt-4"></p>
     </div>
   );
 };
@@ -92,7 +100,7 @@ const Resume: NextPage = () => {
                   <p>B.S. in Computer Science</p>
                 </div>
                 <div className="flex flex-col lg:ml-auto lg:text-right">
-                  <h6>Aug 2020 - May 2024</h6>
+                  <h6>Aug 2020 - Dec 2023</h6>
                   <p>Atlanta, GA</p>
                 </div>
               </div>
@@ -104,22 +112,36 @@ const Resume: NextPage = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-col lg:flex-row py-12 text-xl">
+          <div className="flex flex-col lg:flex-row mt-12 text-xl">
             <h5 className="w-1/4 text-2xl font-extrabold mb-2 lg:mb-0">
               Experience
             </h5>
             <div className="flex flex-col w-full">
               <Entry
+                title="Apple"
+                dateRange="May 2023 - Aug 2023"
+                location="Sunnyvale, CA"
+                role="Software Engineering Intern"
+                icon="🍏"
+                content={[
+                  "Developed a low-latency Go backend service to expand the functionality of Apple’s Wi-Fi management software targeting 3,000+ access points",
+                  "Improved SQL schema and queries for a PostgreSQL database, reducing query latency by 32%",
+                  "Implemented React Query to establish real-time communication between backend service and React application, resulting in instant notifications and enhancing user experience by reducing response time by 75%",
+                  "Created a tool that optimized workflow by 100% for the network engineer team (100+ userbase)",
+                ]}
+                gradient="bg-gradient-to-r from-orange-100 to-pink-100"
+              />
+              <Entry
                 title="Tesla"
-                dateRange="Aug 2022 - Present"
+                dateRange="Aug 2022 - Dec 2022"
                 location="Fremont, CA"
                 role="Software Engineering Intern"
                 icon="🚗"
                 content={[
-                  "Maintained React application that optimizes the purchasing of parts for Tesla's Global Supply Managers and automate the process of supplying parts in the supply chain",
-                  "Implemented graph and map data visualization using the visx library and table data using React Table library",
-                  "Migrated application's frontend library from Styled Components to Tailwind CSS",
-                  "Used by over 400 Global Supply Managers to aid in negotiation of pricing for car parts",
+                  "Contributed to suite of 4 applications that provided real-time analytics and data insights for purchasing supply chain",
+                  "Enriched data visualization capabilities by integrating graph and map representations using the visx library, leading to 20% fewer bug reports and reduced rendering time by over 40%",
+                  "Migrated to Tailwind CSS improving developer experience, reducing bundle size by 30kB, and load times by 219ms",
+                  "Empowering 400+ Global Supply Managers with valuable insights for informed pricing negotiations in EV parts",
                 ]}
                 gradient="bg-gradient-to-r from-red-400 to-pink-300"
               />
@@ -130,10 +152,9 @@ const Resume: NextPage = () => {
                 role="Software Engineering Intern"
                 icon="🍏"
                 content={[
-                  "Protoyped a no-code application to allow Apple internal business stakeholders configure using the Vue JavaScript library",
-                  "Used HTML Drag and Drop API to facilitate an intuitive user experience for a non-technical userbase",
-                  "Developed a JavaScript SDK to integrate chat window into internal Apple organization websites",
-                  "Embedded payment form into Ask Apple to increase user retention",
+                  "Spearheaded the prototyping of a no-code application with Vue.js, enabling 6 Apple internal organizations to configure the chatbot appearance",
+                  "Streamlined user experience drag and drop interface to deliver an intuitive and user-friendly experience for a non-technical userbase, reducing onboarding time by 50% during user testing",
+                  "Developed a JavaScript SDK to seamlessly integrate chat window into internal Apple organization websites, reducing development timeline from 3 days to 1 day",
                 ]}
                 gradient="bg-gradient-to-r from-orange-100 to-pink-100"
               />
@@ -144,26 +165,19 @@ const Resume: NextPage = () => {
                 role="Software Engineering Intern"
                 icon="🔐"
                 content={[
-                  "Streamlined our Network Explorer application through replacing a deprecated chart library with Recharts library",
-                  "Designed and prototyped a chat application using React and TypeScript with Streamr-Client for receiving live data",
-                  "Created a CLI tool called create-streamr-app to create templates for Streamr applications",
+                  "Designed and prototyped a decentralized, serverless chat application that has now launched as thechat.app",
+                  "Improved Network Explorer app by updating chart library with Recharts, resulting in 80% faster load times",
+                  "Generated create-streamr-app, a CLI application for creating Streamr applications from 4 templates",
                 ]}
                 gradient="bg-gradient-to-r from-orange-400 via-violet-500 to-blue-400"
               />
-              <Entry
-                title="HexLabs"
-                dateRange="Feb 2021 - Current"
-                location="Atlanta, GA"
-                role="Tech Team Member"
-                icon="👾"
-                content={[
-                  "Spearheaded the migration of HexLab backend services to a centralized monorepo for increased maintability",
-                  "Acted as project lead for our Admin Dashboard application which combines data of +1500 participants of HackGT",
-                  "Used React Table and React Query to display scoring data of projects for HexLabs’s judging platform",
-                ]}
-                gradient="bg-gradient-to-r from-violet-400 to-pink-500"
-              />
-
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row text-xl">
+            <h5 className="w-1/4 text-2xl font-extrabold mb-2 lg:mb-0">
+              Club Work
+            </h5>
+            <div className="flex flex-col w-full">
               <Entry
                 title="Bits of Good"
                 dateRange="Jan 2021 - Current"
@@ -177,6 +191,19 @@ const Resume: NextPage = () => {
                   "Developed a authentication service with OAuth 2 and Express for a React-Native mobile application",
                 ]}
                 gradient="bg-gradient-to-r from-red-400 to-orange-400"
+              />
+              <Entry
+                title="HexLabs"
+                dateRange="Feb 2021 - Nov 2022"
+                location="Atlanta, GA"
+                role="Tech Team Member"
+                icon="👾"
+                content={[
+                  "Spearheaded the migration of HexLab backend services to a centralized monorepo for increased maintability",
+                  "Acted as project lead for our Admin Dashboard application which combines data of +1500 participants of HackGT",
+                  "Used React Table and React Query to display scoring data of projects for HexLabs’s judging platform",
+                ]}
+                gradient="bg-gradient-to-r from-violet-400 to-pink-500"
               />
             </div>
           </div>
