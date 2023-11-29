@@ -198,7 +198,7 @@ const Home: NextPage = () => {
                   Edmund Xin
                 </h1>
                 <h3 className="text-lg font-medium">
-                  Incoming SWE @ TikTok | CS Major @ Georgia Tech
+                  Incoming SWE @ TikTok | CS @ Georgia Tech
                 </h3>
               </div>
               <div className="w-full flex-col flex items-center gap-4"></div>
