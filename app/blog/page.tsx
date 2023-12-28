@@ -24,7 +24,7 @@ const Blog = () => {
   const postMetadata = getPostMetadata();
   const postLinks = postMetadata.map((post) => {
     return (
-      <div className="my-2">
+      <div className="my-2" key={post.slug}>
         <Link href={`/posts/${post.slug}`}>
           <div className="">
             <div className="font-medium">
