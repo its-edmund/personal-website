@@ -49,16 +49,16 @@ const Work = () => {
         }
         <Experience
           company="TikTok"
-          position="Software Engineering"
+          position="Software Engineer"
           dates="Mar 2024"
-          description="I will be starting as a C++ developer on the Recommendation Infrastructure team at TikTik in March 2024."
+          description="I will be starting as a C++ developer on the Recommendation Infrastructure team at TikTok in March 2024."
         />
         <hr className="border-stone-300" />
         <Experience
           company="Apple"
           position="Software Engineering Intern"
           dates="May 2023 — Aug 2023"
-          description=""
+          description="During my second internship at Apple, I worked on network infrastructure that was crucial to maintaining wifi networks at Apple corporate offices and Apple stores."
         />
         <hr className="border-stone-300" />
         <Experience
@@ -79,7 +79,7 @@ const Work = () => {
           company="Streamr"
           position="Software Engineering Intern"
           dates="Aug 2021 — Dec 2021"
-          description="Streamr Network is a decentralized pub/sub network built on the Ethereum cryptocurrency. The network is made up of thousands of operator nodes which provide computing power and a path for real-time data to travel. As an intern, I was tasked to create a chat application that would utilize the Streamr Network to demostrate potential use cases."
+          description="Streamr Network is a decentralized pub/sub network built on the Ethereum cryptocurrency. The network is made up of thousands of operator nodes which provide computing power and a path for real-time data to travel. As an intern, I was tasked to create a chat application that would utilize the Streamr Network to demonstrate potential use cases."
         />
       </div>
     </>

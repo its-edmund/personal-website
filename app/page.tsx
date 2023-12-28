@@ -33,12 +33,12 @@ export default function Home() {
       <div className="flex flex-row gap-4 my-4">
         <Link target="_blank" href="https://github.com/its-edmund">
           <div className="inline-flex flex-row items-center border-b border-dashed border-b-stone-600 leading-4">
-            <ArrowTopRightIcon className="font-bold" /> GitHub
+            <ArrowTopRightIcon className="font-bold -ml-[3px]" /> GitHub
           </div>
         </Link>
         <Link target="_blank" href="https://www.instagram.com/fresh_fuji/">
           <div className="inline-flex flex-row items-center border-b border-dashed border-b-stone-600 leading-4">
-            <ArrowTopRightIcon className="font-bold" /> Photography
+            <ArrowTopRightIcon className="font-bold -ml-[3px]" /> Photography
           </div>
         </Link>
       </div>

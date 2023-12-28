@@ -22,26 +22,42 @@ const Post = (props: any) => {
         {post.data.date}
       </h3>
       <Markdown
+        className="pb-10"
         options={{
           overrides: {
             h1: {
               props: {
-                className: "font-bold text-lg leading-5",
+                className: "font-bold text-lg leading-5 mb-1 mt-4",
               },
             },
             h2: {
               props: {
-                className: "font-semibold text-[17px]",
+                className: "font-semibold text-[17px] mb-1 mt-4",
               },
             },
             h3: {
               props: {
-                className: "font-semibold text-[16px]",
+                className: "font-semibold text-[16px] mb-1 mt-4",
               },
             },
             p: {
               props: {
                 className: "mb-2",
+              },
+            },
+            li: {
+              props: {
+                className: "list-disc list-inside",
+              },
+            },
+            ul: {
+              props: {
+                className: "my-3",
+              },
+            },
+            a: {
+              props: {
+                className: "underline",
               },
             },
           },
