@@ -3,33 +3,28 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Diatype';
-  src: url("../public/fonts/ABCDiatypeVariable.ttf") format('truetype');
+  font-family: "Diatype";
+  src: url("../public/fonts/ABCDiatypeVariable.ttf") format("truetype");
 }
 
 /* html {
     font-family: Diatype;
   } */
 
-
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 231, 229, 228;
-  --background-end-rgb: 231, 229, 228;
+  --background-rgb: 0, 255, 0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 28, 25, 23;
-    --background-end-rgb: 28, 25, 23;
+    --background-rgb: 231, 229, 228;
   }
 }
 
 body {
   font-family: Diatype;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
 }

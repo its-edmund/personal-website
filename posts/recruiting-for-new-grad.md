@@ -22,4 +22,4 @@ time) and spending increased by a lot.
 How did this effect the tech industry? Just like every other industry. Increased
 spending meant companies had record-breaking earning reports. To keep up with
 demand, companies began hiring like crazy since they had so much capital. For
-software engineers, this was the
+software engineers, this was best time

@@ -27,9 +27,9 @@ export default function RootLayout({
         {/* <Noise /> */}
         <div className="transition-colors flex flex-row h-screen w-screen bg-stone-200 dark:bg-stone-900 font-diatype text-stone-600 dark:text-stone-200 text-sm">
           <Sidebar />
-          <div className="w-5/12 py-10 mx-auto">
+          <main className="w-5/12 py-10 mx-auto">
             {children}
-          </div>
+          </main>
           <AltSidebar />
         </div>
       </body>

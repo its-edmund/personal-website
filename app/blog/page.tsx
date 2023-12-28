@@ -27,7 +27,7 @@ const Blog = () => {
       <div className="my-2" key={post.slug}>
         <Link href={`/posts/${post.slug}`}>
           <div className="">
-            <div className="font-medium">
+            <div className="font-medium text-base">
               {post.title}
             </div>
             <div className="text-stone-400">
