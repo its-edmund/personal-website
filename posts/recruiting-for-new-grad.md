@@ -50,10 +50,11 @@ now terrible.
 As a graduate from class of 2024, I think it's fair to say that we've had a
 tough time during this recruiting season. The tech layoffs have flooded the
 market with talented developers and universities are pumping out computer
-science graduates in record numbers. These have created a recipe for disaster,
-and I knew this during the fall. I was cautious about expecting a return offer
-from Apple so I created several backup plans. This included _heavily_ prepping
-for interviews and applying for grad school if that didn't pan out.
+science graduates in record numbers. These conditions have created a recipe for
+disaster, and I knew this during the fall. I was cautious about expecting a
+return offer from Apple so I created several backup plans. This included
+_heavily_ prepping for interviews and applying for grad school if that didn't
+pan out.
 
 My daily routine saw my regular schoolwork like projects and homework but I set
 aside an hour every evening to work on Leetcode questions, however, I would
