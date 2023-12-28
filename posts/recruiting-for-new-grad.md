@@ -1,6 +1,7 @@
 ---
 title: Recruiting for New Grad
 date: December 24, 2023
+draft: False
 ---
 
 About a week ago, I graduated from Georgia Tech with a computer science degree.

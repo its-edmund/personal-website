@@ -11,6 +11,7 @@ const getPostMetadata = () => {
     const contents = fs.readFileSync(`${folder}${file}`, "utf8");
     const frontMatter = matter(contents);
     return {
+      draft: frontMatter.data.draft,
       title: frontMatter.data.title,
       date: frontMatter.data.date,
       slug: file.replace(".md", ""),
@@ -22,22 +23,24 @@ const getPostMetadata = () => {
 
 const Blog = () => {
   const postMetadata = getPostMetadata();
-  const postLinks = postMetadata.map((post) => {
-    return (
-      <div className="my-2" key={post.slug}>
-        <Link href={`/posts/${post.slug}`}>
-          <div className="">
-            <div className="font-medium text-base">
-              {post.title}
+  const postLinks = postMetadata.filter((post) => post.draft !== true).map(
+    (post) => {
+      return (
+        <div className="py-2" key={post.slug}>
+          <Link href={`/posts/${post.slug}`}>
+            <div className="">
+              <div className="font-medium text-base">
+                {post.title}
+              </div>
+              <div className="text-stone-400">
+                {post.date}
+              </div>
             </div>
-            <div className="text-stone-400">
-              {post.date}
-            </div>
-          </div>
-        </Link>
-      </div>
-    );
-  });
+          </Link>
+        </div>
+      );
+    },
+  );
   return (
     <>
       <h5 className="font-semibold text-lg">Blog</h5>
