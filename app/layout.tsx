@@ -23,9 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="dark:bg-stone-900 bg-stone-200">
         {/* <Noise /> */}
-        <div className="transition-colors flex flex-row h-screen w-screen bg-stone-200 dark:bg-stone-900 font-diatype text-stone-600 dark:text-stone-200 text-sm">
+        <div className="transition-colors flex flex-row h-screen w-screen font-diatype text-stone-600 dark:text-stone-200 text-sm">
           <Sidebar />
           <main className="w-5/12 py-10 mx-auto">
             {children}
