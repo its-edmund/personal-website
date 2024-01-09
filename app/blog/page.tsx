@@ -3,7 +3,13 @@ import getPostMetadata from "../_components/getPostMetadata";
 
 const Blog = () => {
   const postMetadata = getPostMetadata();
-  const postLinks = postMetadata.filter((post) => post.draft !== true).map(
+  const postLinks = postMetadata.filter((post) => post.draft !== true).sort(
+    (a, b) => {
+      const a_date = new Date(a.date);
+      const b_date = new Date(b.date);
+      return (b_date as any) - (a_date as any);
+    },
+  ).map(
     (post) => {
       return (
         <div className="py-2" key={post.slug}>

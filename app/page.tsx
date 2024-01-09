@@ -1,8 +1,35 @@
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import getPostMetadata from "./_components/getPostMetadata";
 
 type BlogLinkProps = {
   title: string;
+};
+
+const generateRecentPosts = () => {
+  const postMetadata = getPostMetadata();
+  const recentPosts = postMetadata.filter((post) => post.draft !== true).sort(
+    (a, b) => {
+      const a_date = new Date(a.date);
+      const b_date = new Date(b.date);
+      return (b_date as any) - (a_date as any);
+    },
+  ).slice(0, 3).map(
+    (post) => {
+      return (
+        <Link href={`/posts/${post.slug}`}>
+          <div className="rounded-sm bg-stone-300 border border-stone-400 p-2 flex flex-row items-center justify-between">
+            <div className="font-semibold">
+              {post.title}
+              <div className="font-normal text-stone-500">{post.date}</div>
+            </div>
+            <ArrowTopRightIcon />
+          </div>
+        </Link>
+      );
+    },
+  );
+  return recentPosts;
 };
 
 const BlogLink = ({ title }: BlogLinkProps) => {
@@ -20,6 +47,7 @@ const BlogLink = ({ title }: BlogLinkProps) => {
 };
 
 export default function Home() {
+  const recentPosts = generateRecentPosts();
   return (
     <>
       <h1 className="text-base font-semibold mb-4">Hey, I&apos;m Edmund</h1>
@@ -46,8 +74,8 @@ export default function Home() {
         If you&apos;re interested in my developer blog that is starting pretty
         slowly, you can check out my most recent posts:
       </div>
-      <div className="my-4">
-        <BlogLink title="Recruiting for New Grad" />
+      <div className="my-4 flex flex-col gap-2">
+        {recentPosts}
       </div>
     </>
   );

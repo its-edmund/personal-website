@@ -2,6 +2,32 @@ import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "@/app/_components/getPostMetadata";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+const Code = ({ className, children }) => {
+  let lang = "text";
+  if (className && className.startsWith("lang-")) {
+    lang = className.replace("lang-", "");
+  }
+  console.log(lang);
+  return (
+    <SyntaxHighlighter
+      language={lang}
+      style={materialDark}
+      className="rounded my-16"
+    >
+      {children}
+    </SyntaxHighlighter>
+  );
+};
+
+const PreBlock = ({ children, ...rest }) => {
+  if ("type" in children && children["type"] === "code") {
+    return Code(children["props"]);
+  }
+  return <pre {...rest}>{children}</pre>;
+};
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -67,6 +93,9 @@ const Post = (props: any) => {
               props: {
                 className: "underline",
               },
+            },
+            pre: {
+              component: PreBlock,
             },
           },
         }}
