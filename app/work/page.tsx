@@ -53,28 +53,28 @@ const Work = () => {
           dates="Mar 2024"
           description="I will be starting as a C++ developer on the Recommendation Infrastructure team at TikTok in March 2024."
         />
-        <hr className="border-stone-300" />
+        <hr className="border-stone-300 dark:border-stone-600" />
         <Experience
           company="Apple"
           position="Software Engineering Intern"
           dates="May 2023 — Aug 2023"
           description="During my second internship at Apple, I worked on network infrastructure that was crucial to maintaining wifi networks at Apple corporate offices and Apple stores."
         />
-        <hr className="border-stone-300" />
+        <hr className="border-stone-300 dark:border-stone-600" />
         <Experience
           company="Tesla"
           position="Software Engineering Intern"
           dates="Aug 2022 — Dec 2022"
           description="I was a full stack intern for Tesla's Supply Chain Automation team. I worked on an application that helps Global Supply Managers analyze part prices which can help provide information for price negotiation. These tools help to reduce costs throughout the supply chain which allows for cheaper product for Tesla customers."
         />
-        <hr className="border-stone-300" />
+        <hr className="border-stone-300 dark:border-stone-600" />
         <Experience
           company="Apple"
           position="Software Engineering Intern"
           dates="May 2022 — Aug 2022"
           description="At Apple, I worked on a no-code tool written in Vue which would allow Apple Business Stakeholders create their own chat widget to integrate with their website. This drag-and-drop tool configures the design and then a JavaScript SDK it imported into the HTML file which will make the chat window appear."
         />
-        <hr className="border-stone-300" />
+        <hr className="border-stone-300 dark:border-stone-600" />
         <Experience
           company="Streamr"
           position="Software Engineering Intern"
