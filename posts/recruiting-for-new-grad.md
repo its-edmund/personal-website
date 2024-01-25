@@ -98,4 +98,4 @@ luck!
 
 ## References:
 
-https://www.rand.org/pubs/commentary/2023/03/consequences-of-the-war-in-ukraine-the-economic-fallout.html
+<https://www.rand.org/pubs/commentary/2023/03/consequences-of-the-war-in-ukraine-the-economic-fallout.html>
