@@ -56,9 +56,14 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "098c4b88857a4cdb8d496fbd8f9726d6"}'
+        >
+        </script>
       </head>
       <body className="dark:bg-stone-900 bg-stone-200">
-        {/* <Noise /> */}
         <div className="transition-colors flex flex-row h-screen w-screen font-diatype text-stone-600 dark:text-stone-200 text-sm">
           <Sidebar />
           <main className="w-5/12 py-10 mx-auto">

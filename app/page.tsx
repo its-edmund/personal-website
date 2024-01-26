@@ -17,7 +17,7 @@ const generateRecentPosts = () => {
   ).slice(0, 3).map(
     (post) => {
       return (
-        <Link href={`/posts/${post.slug}`}>
+        <Link href={`/posts/${post.slug}`} key={post.slug}>
           <div className="rounded-sm bg-stone-300 dark:bg-stone-700 border dark:border-stone-600 p-2 flex flex-row items-center justify-between">
             <div className="font-semibold">
               {post.title}

@@ -8,6 +8,7 @@ import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import "katex/dist/katex.min.css";
+import Image from "next/image";
 
 // const Code = ({ className, children }) => {
 //   let lang = "text";
@@ -49,42 +50,53 @@ export const generateStaticParams = async () => {
   }));
 };
 
-const H1 = ({ children }) => {
+const H1 = (props: any) => {
+  const { children } = props;
   return <h1 className="fontbold text-lg leading-5 mb-1 mt-4">{children}</h1>;
 };
 
-const H2 = ({ children }) => {
+const H2 = (props: any) => {
+  const { children } = props;
   return <h2 className="font-semibold text-[17px] mb-1 mt-4">{children}</h2>;
 };
 
-const H3 = ({ children }) => {
+const H3 = (props: any) => {
+  const { children } = props;
   return <h3 className="font-semibold text-[16px] mb-1 mt-4">{children}</h3>;
 };
 
-const P = ({ children }) => {
-  return <p className="mb-2">{children}</p>;
+const P = (props: any) => {
+  const { children } = props;
+  return <p className="mb-2 w-full">{children}</p>;
 };
 
-const Li = ({ children }) => {
+const Li = (props: any) => {
+  const { children } = props;
   return <li className="list-disc list-inside">{children}</li>;
 };
 
-const Ul = ({ children }) => {
+const Ul = (props: any) => {
+  const { children } = props;
   return <ul className="my-3">{children}</ul>;
 };
 
-const A = ({ children, href }) => {
+const A = (props: any) => {
+  const { children, href } = props;
   return <a className="underline" target="_blank" href={href}>{children}</a>;
 };
 
-const Img = ({ alt, src, title }) => {
+const Img = (props: any) => {
+  const { alt, src, title } = props;
   return (
     <div className="my-4">
-      <img
+      <Image
         src={src}
         alt={alt}
         title={title}
         className="max-w-full rounded shadow-md"
+        layout="responsive"
+        height={100}
+        width={100}
       />
       {title && <p className="text-center text-sm mt-2">{title}</p>}
     </div>
@@ -117,16 +129,17 @@ const Post = (props: any) => {
           code(props) {
             const { children, className, node, ...rest } = props;
             const match = /language-(\w+)/.exec(className || "");
+            const sanitized = String(children).replace(/\n$/, "");
             return match
               ? (
                 <SyntaxHighlighter
-                  {...rest}
                   PreTag="div"
-                  children={String(children).replace(/\n$/, "")}
                   language={match[1]}
                   style={materialDark}
                   className="rounded shadow-md"
-                />
+                >
+                  {sanitized}
+                </SyntaxHighlighter>
               )
               : (
                 <code {...rest} className={className}>
