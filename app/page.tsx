@@ -18,7 +18,7 @@ const generateRecentPosts = () => {
     (post) => {
       return (
         <Link href={`/posts/${post.slug}`} key={post.slug}>
-          <div className="rounded-sm bg-stone-300 dark:bg-stone-700 border dark:border-stone-600 p-2 flex flex-row items-center justify-between">
+          <div className="rounded-sm bg-stone-300 dark:bg-stone-700 border border-stone-400 dark:border-stone-600 p-2 flex flex-row items-center justify-between">
             <div className="font-semibold">
               {post.title}
               <div className="font-normal text-stone-500 dark:text-stone-400">
